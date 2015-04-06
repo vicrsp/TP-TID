@@ -571,7 +571,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 0x00000000                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x4558
+.text           0x00000000     0x45c8
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -588,307 +588,306 @@ END GROUP
                 0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x0000002c       0x54 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
- .text.main     0x00000080      0x10c .\CortexM3\ARM_GCC_473\Debug\main.o
+ .text.main     0x00000080      0x180 .\CortexM3\ARM_GCC_473\Debug\main.o
                 0x00000080                main
  .text.IntDefaultHandler
-                0x0000018c        0x8 .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
-                0x0000018c                IntDefaultHandler
- .text.Start_c  0x00000194       0xcc .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
-                0x00000194                Start_c
+                0x00000200        0x8 .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
+                0x00000200                IntDefaultHandler
+ .text.Start_c  0x00000208       0xcc .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
+                0x00000208                Start_c
  .text.initialize_psoc
-                0x00000260       0xb4 .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
-                0x00000260                initialize_psoc
+                0x000002d4       0xb4 .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
+                0x000002d4                initialize_psoc
  .text.CYMEMZERO
-                0x00000314       0x20 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
+                0x00000388       0x20 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
  .text.CYCONFIGCPY
-                0x00000334       0x20 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
+                0x000003a8       0x20 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
  .text.CyClockStartupError
-                0x00000354        0xc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
+                0x000003c8        0xc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x00000360       0x84 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
+                0x000003d4       0x84 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x000003e4      0x11c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
+                0x00000458      0x11c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x00000500       0x50 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
+                0x00000574       0x50 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
  .text.cyfitter_cfg
-                0x00000550      0x178 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
-                0x00000550                cyfitter_cfg
+                0x000005c4      0x178 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
+                0x000005c4                cyfitter_cfg
  .text.DieTemp_Start
-                0x000006c8       0x48 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
-                0x000006c8                DieTemp_Start
+                0x0000073c       0x48 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
+                0x0000073c                DieTemp_Start
  .text.DieTemp_Query
-                0x00000710       0x98 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
-                0x00000710                DieTemp_Query
+                0x00000784       0x98 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
+                0x00000784                DieTemp_Query
  .text.DieTemp_GetTempT
-                0x000007a8       0x68 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
+                0x0000081c       0x68 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
  .text.DieTemp_GetTemp
-                0x00000810       0x3c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
-                0x00000810                DieTemp_GetTemp
+                0x00000884       0x3c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
+                0x00000884                DieTemp_GetTemp
  .text.USBUART_Start
-                0x0000084c       0x44 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
-                0x0000084c                USBUART_Start
+                0x000008c0       0x44 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+                0x000008c0                USBUART_Start
  .text.USBUART_Init
-                0x00000890      0x238 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
-                0x00000890                USBUART_Init
+                0x00000904      0x238 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+                0x00000904                USBUART_Init
  .text.USBUART_InitComponent
-                0x00000ac8      0x138 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
-                0x00000ac8                USBUART_InitComponent
+                0x00000b3c      0x138 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+                0x00000b3c                USBUART_InitComponent
  .text.USBUART_ReInitComponent
-                0x00000c00       0x88 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
-                0x00000c00                USBUART_ReInitComponent
+                0x00000c74       0x88 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+                0x00000c74                USBUART_ReInitComponent
  .text.USBUART_GetConfiguration
-                0x00000c88       0x18 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
-                0x00000c88                USBUART_GetConfiguration
+                0x00000cfc       0x18 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+                0x00000cfc                USBUART_GetConfiguration
  .text.USBUART_GetEPCount
-                0x00000ca0       0x74 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
-                0x00000ca0                USBUART_GetEPCount
+                0x00000d14       0x74 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+                0x00000d14                USBUART_GetEPCount
  .text.USBUART_LoadInEP
-                0x00000d14      0x150 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
-                0x00000d14                USBUART_LoadInEP
+                0x00000d88      0x150 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+                0x00000d88                USBUART_LoadInEP
  .text.USBUART_ReadOutEP
-                0x00000e64       0x98 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
-                0x00000e64                USBUART_ReadOutEP
+                0x00000ed8       0x98 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+                0x00000ed8                USBUART_ReadOutEP
  .text.USBUART_EnableOutEP
-                0x00000efc       0x78 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
-                0x00000efc                USBUART_EnableOutEP
+                0x00000f70       0x78 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+                0x00000f70                USBUART_EnableOutEP
  .text.USBUART_DispatchCDCClassRqst
-                0x00000f74      0x11c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
-                0x00000f74                USBUART_DispatchCDCClassRqst
+                0x00000fe8      0x11c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
+                0x00000fe8                USBUART_DispatchCDCClassRqst
  .text.USBUART_CDC_Init
-                0x00001090       0x28 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
-                0x00001090                USBUART_CDC_Init
+                0x00001104       0x28 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
+                0x00001104                USBUART_CDC_Init
  .text.USBUART_StrLen
-                0x000010b8       0x34 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
+                0x0000112c       0x34 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
  .text.USBUART_PutString
-                0x000010ec      0x140 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
-                0x000010ec                USBUART_PutString
+                0x00001160      0x140 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
+                0x00001160                USBUART_PutString
  .text.USBUART_DataIsReady
-                0x0000122c       0x34 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
-                0x0000122c                USBUART_DataIsReady
+                0x000012a0       0x34 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
+                0x000012a0                USBUART_DataIsReady
  .text.USBUART_CDCIsReady
-                0x00001260       0x34 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
-                0x00001260                USBUART_CDCIsReady
+                0x000012d4       0x34 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
+                0x000012d4                USBUART_CDCIsReady
  .text.USBUART_GetAll
-                0x00001294       0x54 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
-                0x00001294                USBUART_GetAll
+                0x00001308       0x54 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
+                0x00001308                USBUART_GetAll
  .text.USBUART_EP_0_ISR
-                0x000012e8      0x140 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x000012e8                USBUART_EP_0_ISR
+                0x0000135c      0x140 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x0000135c                USBUART_EP_0_ISR
  .text.USBUART_HandleSetup
-                0x00001428       0xa8 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x00001428                USBUART_HandleSetup
+                0x0000149c       0xa8 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x0000149c                USBUART_HandleSetup
  .text.USBUART_HandleIN
-                0x000014d0       0x50 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x000014d0                USBUART_HandleIN
+                0x00001544       0x50 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x00001544                USBUART_HandleIN
  .text.USBUART_HandleOUT
-                0x00001520       0x60 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x00001520                USBUART_HandleOUT
+                0x00001594       0x60 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x00001594                USBUART_HandleOUT
  .text.USBUART_LoadEP0
-                0x00001580      0x138 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x00001580                USBUART_LoadEP0
+                0x000015f4      0x138 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x000015f4                USBUART_LoadEP0
  .text.USBUART_InitControlRead
-                0x000016b8       0x90 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x000016b8                USBUART_InitControlRead
+                0x0000172c       0x90 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x0000172c                USBUART_InitControlRead
  .text.USBUART_InitZeroLengthControlTransfer
-                0x00001748       0x58 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x00001748                USBUART_InitZeroLengthControlTransfer
+                0x000017bc       0x58 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x000017bc                USBUART_InitZeroLengthControlTransfer
  .text.USBUART_ControlReadDataStage
-                0x000017a0        0xc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x000017a0                USBUART_ControlReadDataStage
+                0x00001814        0xc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x00001814                USBUART_ControlReadDataStage
  .text.USBUART_ControlReadStatusStage
-                0x000017ac       0x54 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x000017ac                USBUART_ControlReadStatusStage
+                0x00001820       0x54 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x00001820                USBUART_ControlReadStatusStage
  .text.USBUART_InitControlWrite
-                0x00001800       0x84 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x00001800                USBUART_InitControlWrite
+                0x00001874       0x84 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x00001874                USBUART_InitControlWrite
  .text.USBUART_ControlWriteDataStage
-                0x00001884       0xfc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x00001884                USBUART_ControlWriteDataStage
+                0x000018f8       0xfc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x000018f8                USBUART_ControlWriteDataStage
  .text.USBUART_ControlWriteStatusStage
-                0x00001980       0x2c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x00001980                USBUART_ControlWriteStatusStage
+                0x000019f4       0x2c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x000019f4                USBUART_ControlWriteStatusStage
  .text.USBUART_InitNoDataControlTransfer
-                0x000019ac       0x48 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x000019ac                USBUART_InitNoDataControlTransfer
+                0x00001a20       0x48 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x00001a20                USBUART_InitNoDataControlTransfer
  .text.USBUART_NoDataControlStatusStage
-                0x000019f4       0x64 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x000019f4                USBUART_NoDataControlStatusStage
+                0x00001a68       0x64 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x00001a68                USBUART_NoDataControlStatusStage
  .text.USBUART_UpdateStatusBlock
-                0x00001a58       0x58 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x00001a58                USBUART_UpdateStatusBlock
+                0x00001acc       0x58 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x00001acc                USBUART_UpdateStatusBlock
  .text.USBUART_InitializeStatusBlock
-                0x00001ab0       0x48 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
-                0x00001ab0                USBUART_InitializeStatusBlock
+                0x00001b24       0x48 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+                0x00001b24                USBUART_InitializeStatusBlock
  .text.USBUART_EP_1_ISR
-                0x00001af8       0x74 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
-                0x00001af8                USBUART_EP_1_ISR
- .text.USBUART_EP_2_ISR
                 0x00001b6c       0x74 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
-                0x00001b6c                USBUART_EP_2_ISR
+                0x00001b6c                USBUART_EP_1_ISR
+ .text.USBUART_EP_2_ISR
+                0x00001be0       0x74 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
+                0x00001be0                USBUART_EP_2_ISR
  .text.USBUART_EP_3_ISR
-                0x00001be0       0x7c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
-                0x00001be0                USBUART_EP_3_ISR
+                0x00001c54       0x7c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
+                0x00001c54                USBUART_EP_3_ISR
  .text.USBUART_SOF_ISR
-                0x00001c5c        0xc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
-                0x00001c5c                USBUART_SOF_ISR
+                0x00001cd0        0xc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
+                0x00001cd0                USBUART_SOF_ISR
  .text.USBUART_BUS_RESET_ISR
-                0x00001c68        0xc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
-                0x00001c68                USBUART_BUS_RESET_ISR
+                0x00001cdc        0xc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
+                0x00001cdc                USBUART_BUS_RESET_ISR
  .text.USBUART_HandleStandardRqst
-                0x00001c74      0x654 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x00001c74                USBUART_HandleStandardRqst
+                0x00001ce8      0x654 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x00001ce8                USBUART_HandleStandardRqst
  .text.USBUART_ReadDieID
-                0x000022c8       0xa8 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x000022c8                USBUART_ReadDieID
+                0x0000233c       0xa8 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x0000233c                USBUART_ReadDieID
  .text.USBUART_ConfigReg
-                0x00002370      0x204 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x00002370                USBUART_ConfigReg
+                0x000023e4      0x204 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x000023e4                USBUART_ConfigReg
  .text.USBUART_Config
-                0x00002574      0x474 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x00002574                USBUART_Config
+                0x000025e8      0x474 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x000025e8                USBUART_Config
  .text.USBUART_ConfigAltChanged
-                0x000029e8      0x354 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x000029e8                USBUART_ConfigAltChanged
+                0x00002a5c      0x354 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x00002a5c                USBUART_ConfigAltChanged
  .text.USBUART_GetConfigTablePtr
-                0x00002d3c       0x60 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x00002d3c                USBUART_GetConfigTablePtr
+                0x00002db0       0x60 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x00002db0                USBUART_GetConfigTablePtr
  .text.USBUART_GetDeviceTablePtr
-                0x00002d9c       0x28 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x00002d9c                USBUART_GetDeviceTablePtr
+                0x00002e10       0x28 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x00002e10                USBUART_GetDeviceTablePtr
  .text.USBUART_GetInterfaceClassTablePtr
-                0x00002dc4       0x58 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x00002dc4                USBUART_GetInterfaceClassTablePtr
+                0x00002e38       0x58 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x00002e38                USBUART_GetInterfaceClassTablePtr
  .text.USBUART_SetEndpointHalt
-                0x00002e1c      0x130 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x00002e1c                USBUART_SetEndpointHalt
+                0x00002e90      0x130 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x00002e90                USBUART_SetEndpointHalt
  .text.USBUART_ClearEndpointHalt
-                0x00002f4c      0x1c4 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x00002f4c                USBUART_ClearEndpointHalt
+                0x00002fc0      0x1c4 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x00002fc0                USBUART_ClearEndpointHalt
  .text.USBUART_ValidateAlternateSetting
-                0x00003110       0x90 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
-                0x00003110                USBUART_ValidateAlternateSetting
+                0x00003184       0x90 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+                0x00003184                USBUART_ValidateAlternateSetting
  .text.USBUART_HandleVendorRqst
-                0x000031a0       0x70 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_vnd.o)
-                0x000031a0                USBUART_HandleVendorRqst
+                0x00003214       0x70 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_vnd.o)
+                0x00003214                USBUART_HandleVendorRqst
  .text.LCD_Char_1_Init
-                0x00003210       0x9c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x00003210                LCD_Char_1_Init
+                0x00003284       0x9c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x00003284                LCD_Char_1_Init
  .text.LCD_Char_1_Enable
-                0x000032ac       0x1c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x000032ac                LCD_Char_1_Enable
+                0x00003320       0x1c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x00003320                LCD_Char_1_Enable
  .text.LCD_Char_1_Start
-                0x000032c8       0x2c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x000032c8                LCD_Char_1_Start
+                0x0000333c       0x2c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x0000333c                LCD_Char_1_Start
  .text.LCD_Char_1_Position
-                0x000032f4       0x78 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x000032f4                LCD_Char_1_Position
+                0x00003368       0x78 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x00003368                LCD_Char_1_Position
  .text.LCD_Char_1_PrintString
-                0x0000336c       0x40 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x0000336c                LCD_Char_1_PrintString
+                0x000033e0       0x40 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x000033e0                LCD_Char_1_PrintString
  .text.LCD_Char_1_PutChar
-                0x000033ac       0x1c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x000033ac                LCD_Char_1_PutChar
+                0x00003420       0x1c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x00003420                LCD_Char_1_PutChar
  .text.LCD_Char_1_WriteData
-                0x000033c8       0x38 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x000033c8                LCD_Char_1_WriteData
+                0x0000343c       0x38 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x0000343c                LCD_Char_1_WriteData
  .text.LCD_Char_1_WriteControl
-                0x00003400       0x38 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x00003400                LCD_Char_1_WriteControl
+                0x00003474       0x38 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x00003474                LCD_Char_1_WriteControl
  .text.LCD_Char_1_IsReady
-                0x00003438      0x208 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x00003438                LCD_Char_1_IsReady
+                0x000034ac      0x208 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x000034ac                LCD_Char_1_IsReady
  .text.LCD_Char_1_WrDatNib
-                0x00003640       0xb4 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x000036b4       0xb4 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
  .text.LCD_Char_1_WrCntrlNib
-                0x000036f4       0x90 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x00003768       0x90 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
  .text.LCD_Char_1_PrintU32Number
-                0x00003784       0xcc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
-                0x00003784                LCD_Char_1_PrintU32Number
+                0x000037f8       0xcc .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+                0x000037f8                LCD_Char_1_PrintU32Number
  .text.LCD_Char_1_LoadCustomFonts
-                0x00003850       0x4c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1_CustChars.o)
-                0x00003850                LCD_Char_1_LoadCustomFonts
- *fill*         0x0000389c        0x4 00
- .text          0x000038a0       0x28 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyBootAsmGnu.o)
-                0x000038a0                CyDelayCycles
-                0x000038b4                CyEnterCriticalSection
-                0x000038bc                CyExitCriticalSection
- .text.CyHalt   0x000038c8       0x18 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
-                0x000038c8                CyHalt
- .text.CyDelay  0x000038e0       0x48 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
-                0x000038e0                CyDelay
+                0x000038c4       0x4c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1_CustChars.o)
+                0x000038c4                LCD_Char_1_LoadCustomFonts
+ .text          0x00003910       0x28 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyBootAsmGnu.o)
+                0x00003910                CyDelayCycles
+                0x00003924                CyEnterCriticalSection
+                0x0000392c                CyExitCriticalSection
+ .text.CyHalt   0x00003938       0x18 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
+                0x00003938                CyHalt
+ .text.CyDelay  0x00003950       0x48 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
+                0x00003950                CyDelay
  .text.CyDelayUs
-                0x00003928       0x28 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
-                0x00003928                CyDelayUs
+                0x00003998       0x28 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
+                0x00003998                CyDelayUs
  .text.CyIntSetVector
-                0x00003950       0x60 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
-                0x00003950                CyIntSetVector
+                0x000039c0       0x60 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
+                0x000039c0                CyIntSetVector
  .text.CyIntSetPriority
-                0x000039b0       0x4c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
-                0x000039b0                CyIntSetPriority
+                0x00003a20       0x4c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
+                0x00003a20                CyIntSetPriority
  .text.CySpcStart
-                0x000039fc       0x58 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
-                0x000039fc                CySpcStart
+                0x00003a6c       0x58 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
+                0x00003a6c                CySpcStart
  .text.CySpcReadData
-                0x00003a54       0x64 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
-                0x00003a54                CySpcReadData
+                0x00003ac4       0x64 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
+                0x00003ac4                CySpcReadData
  .text.CySpcGetTemp
-                0x00003ab8       0x8c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
-                0x00003ab8                CySpcGetTemp
+                0x00003b28       0x8c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
+                0x00003b28                CySpcGetTemp
  .text.CySpcLock
-                0x00003b44       0x88 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
-                0x00003b44                CySpcLock
+                0x00003bb4       0x88 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
+                0x00003bb4                CySpcLock
  .text.CySpcUnlock
-                0x00003bcc       0x68 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
-                0x00003bcc                CySpcUnlock
+                0x00003c3c       0x68 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
+                0x00003c3c                CySpcUnlock
  .text.USBUART_DispatchClassRqst
-                0x00003c34       0xa8 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cls.o)
-                0x00003c34                USBUART_DispatchClassRqst
+                0x00003ca4       0xa8 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cls.o)
+                0x00003ca4                USBUART_DispatchClassRqst
  .text.__libc_init_array
-                0x00003cdc       0x4c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-init.o)
-                0x00003cdc                __libc_init_array
- .text.memcpy   0x00003d28       0x12 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memcpy.o)
-                0x00003d28                memcpy
- .text.memset   0x00003d3a       0x10 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memset.o)
-                0x00003d3a                memset
- *fill*         0x00003d4a        0x2 00
- .text.sprintf  0x00003d4c       0x48 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-sprintf.o)
-                0x00003d4c                siprintf
-                0x00003d4c                sprintf
+                0x00003d4c       0x4c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-init.o)
+                0x00003d4c                __libc_init_array
+ .text.memcpy   0x00003d98       0x12 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memcpy.o)
+                0x00003d98                memcpy
+ .text.memset   0x00003daa       0x10 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memset.o)
+                0x00003daa                memset
+ *fill*         0x00003dba        0x2 00
+ .text.sprintf  0x00003dbc       0x48 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-sprintf.o)
+                0x00003dbc                siprintf
+                0x00003dbc                sprintf
  .text.__ssputc_r
-                0x00003d94       0xae c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-svfprintf.o)
-                0x00003d94                __ssputc_r
- *fill*         0x00003e42        0x2 00
+                0x00003e04       0xae c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-svfprintf.o)
+                0x00003e04                __ssputc_r
+ *fill*         0x00003eb2        0x2 00
  .text._svfprintf_r
-                0x00003e44      0x1f4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-svfprintf.o)
-                0x00003e44                _svfiprintf_r
-                0x00003e44                _svfprintf_r
+                0x00003eb4      0x1f4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-svfprintf.o)
+                0x00003eb4                _svfiprintf_r
+                0x00003eb4                _svfprintf_r
  .text._printf_common
-                0x00004038       0xde c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-vfprintf_i.o)
-                0x00004038                _printf_common
- *fill*         0x00004116        0x2 00
+                0x000040a8       0xde c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-vfprintf_i.o)
+                0x000040a8                _printf_common
+ *fill*         0x00004186        0x2 00
  .text._printf_i
-                0x00004118      0x248 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-vfprintf_i.o)
-                0x00004118                _printf_i
- .text._free_r  0x00004360       0x88 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-freer.o)
-                0x00004360                _free_r
+                0x00004188      0x248 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-vfprintf_i.o)
+                0x00004188                _printf_i
+ .text._free_r  0x000043d0       0x88 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-freer.o)
+                0x000043d0                _free_r
  .text._malloc_r
-                0x000043e8       0x94 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-mallocr.o)
-                0x000043e8                _malloc_r
- .text.memchr   0x0000447c       0x1c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memchr.o)
-                0x0000447c                memchr
+                0x00004458       0x94 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-mallocr.o)
+                0x00004458                _malloc_r
+ .text.memchr   0x000044ec       0x1c c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memchr.o)
+                0x000044ec                memchr
  .text._realloc_r
-                0x00004498       0x48 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-reallocr.o)
-                0x00004498                _realloc_r
- .text._sbrk_r  0x000044e0       0x20 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-sbrkr.o)
-                0x000044e0                _sbrk_r
- .text.strlen   0x00004500       0x10 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-strlen.o)
-                0x00004500                strlen
+                0x00004508       0x48 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-reallocr.o)
+                0x00004508                _realloc_r
+ .text._sbrk_r  0x00004550       0x20 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-sbrkr.o)
+                0x00004550                _sbrk_r
+ .text.strlen   0x00004570       0x10 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-strlen.o)
+                0x00004570                strlen
  .text._malloc_usable_size_r
-                0x00004510       0x12 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-msizer.o)
-                0x00004510                _malloc_usable_size_r
- *fill*         0x00004522        0x2 00
- .text._sbrk    0x00004524       0x34 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(sbrk.o)
-                0x00004524                _sbrk
+                0x00004580       0x12 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-msizer.o)
+                0x00004580                _malloc_usable_size_r
+ *fill*         0x00004592        0x2 00
+ .text._sbrk    0x00004594       0x34 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(sbrk.o)
+                0x00004594                _sbrk
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -901,98 +900,98 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00004558        0x0
+.v4_bx          0x000045c8        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00004558        0x0
+.iplt           0x000045c8        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00004558        0x4
+.eh_frame       0x000045c8        0x4
  *(.eh_frame)
- .eh_frame      0x00004558        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
- .eh_frame      0x00004558        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtend.o
-                0x0000455c                PROVIDE (__exidx_start, .)
+ .eh_frame      0x000045c8        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
+ .eh_frame      0x000045c8        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtend.o
+                0x000045cc                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000455c                __exidx_end = .
+                0x000045cc                __exidx_end = .
 
-.rodata         0x0000455c      0x29c
+.rodata         0x000045cc      0x2b4
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000455c       0x18 .\CortexM3\ARM_GCC_473\Debug\main.o
- .rodata        0x00004574       0x2c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
- .rodata        0x000045a0       0x14 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
- .rodata        0x000045b4       0x40 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1_CustChars.o)
-                0x000045b4                LCD_Char_1_customFonts
- .rodata        0x000045f4      0x194 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_descr.o)
-                0x000045f4                USBUART_DEVICE0_DESCR
-                0x00004608                USBUART_DEVICE0_CONFIGURATION0_DESCR
-                0x0000464c                USBUART_STRING_DESCRIPTORS
-                0x000046ec                USBUART_SN_STRING_DESCRIPTOR
-                0x000046f0                USBUART_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
-                0x00004708                USBUART_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
-                0x0000470c                USBUART_DEVICE0_CONFIGURATION0_TABLE
-                0x00004734                USBUART_DEVICE0_TABLE
-                0x00004744                USBUART_TABLE
-                0x0000474c                USBUART_MSOS_DESCRIPTOR
-                0x00004760                USBUART_MSOS_CONFIGURATION_DESCR
+ .rodata        0x000045cc       0x30 .\CortexM3\ARM_GCC_473\Debug\main.o
+ .rodata        0x000045fc       0x2c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
+ .rodata        0x00004628       0x14 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+ .rodata        0x0000463c       0x40 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1_CustChars.o)
+                0x0000463c                LCD_Char_1_customFonts
+ .rodata        0x0000467c      0x194 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_descr.o)
+                0x0000467c                USBUART_DEVICE0_DESCR
+                0x00004690                USBUART_DEVICE0_CONFIGURATION0_DESCR
+                0x000046d4                USBUART_STRING_DESCRIPTORS
+                0x00004774                USBUART_SN_STRING_DESCRIPTOR
+                0x00004778                USBUART_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+                0x00004790                USBUART_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+                0x00004794                USBUART_DEVICE0_CONFIGURATION0_TABLE
+                0x000047bc                USBUART_DEVICE0_TABLE
+                0x000047cc                USBUART_TABLE
+                0x000047d4                USBUART_MSOS_DESCRIPTOR
+                0x000047e8                USBUART_MSOS_CONFIGURATION_DESCR
  .rodata.str1.1
-                0x00004788        0x2 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
+                0x00004810        0x2 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
  .rodata.str1.1
-                0x0000478a       0x11 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-svfprintf.o)
+                0x00004812       0x11 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-svfprintf.o)
  .rodata.str1.1
-                0x0000479b       0x22 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-vfprintf_i.o)
-                0x000047c0                . = ALIGN (0x4)
- *fill*         0x000047bd        0x3 00
+                0x00004823       0x22 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-vfprintf_i.o)
+                0x00004848                . = ALIGN (0x4)
+ *fill*         0x00004845        0x3 00
  *(.init)
- .init          0x000047c0        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
-                0x000047c0                _init
- .init          0x000047c4        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
-                0x000047cc                . = ALIGN (0x4)
-                0x000047cc                __preinit_array_start = .
+ .init          0x00004848        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
+                0x00004848                _init
+ .init          0x0000484c        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
+                0x00004854                . = ALIGN (0x4)
+                0x00004854                __preinit_array_start = .
  *(.preinit_array)
-                0x000047cc                __preinit_array_end = .
-                0x000047cc                . = ALIGN (0x4)
-                0x000047cc                __init_array_start = .
+                0x00004854                __preinit_array_end = .
+                0x00004854                . = ALIGN (0x4)
+                0x00004854                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x000047cc        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
- .init_array    0x000047d0        0x4 .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
-                0x000047d4                __init_array_end = .
-                0x000047d4                . = ALIGN (0x4)
+ .init_array    0x00004854        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
+ .init_array    0x00004858        0x4 .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
+                0x0000485c                __init_array_end = .
+                0x0000485c                . = ALIGN (0x4)
  *(.fini)
- .fini          0x000047d4        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
-                0x000047d4                _fini
- .fini          0x000047d8        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
-                0x000047e0                . = ALIGN (0x4)
-                0x000047e0                __fini_array_start = .
+ .fini          0x0000485c        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
+                0x0000485c                _fini
+ .fini          0x00004860        0x8 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
+                0x00004868                . = ALIGN (0x4)
+                0x00004868                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x000047e0        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
+ .fini_array    0x00004868        0x4 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x000047e4                __fini_array_end = .
-                0x000047e4                . = ALIGN (0x4)
+                0x0000486c                __fini_array_end = .
+                0x0000486c                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x000047e4                . = ALIGN (0x4)
+                0x0000486c                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x000047e4                . = ALIGN (0x4)
-                0x000047e4                __cy_regions = .
-                0x000047e4        0x4 LONG 0x47f8 __cy_region_init_ram
-                0x000047e8        0x4 LONG 0x1fff8108 __cy_region_start_data
-                0x000047ec        0x4 LONG 0x88 __cy_region_init_size_ram
-                0x000047f0        0x4 LONG 0x100 __cy_region_zero_size_ram
-                0x000047f4                __cy_regions_end = .
-                0x000047f8                . = ALIGN (0x8)
- *fill*         0x000047f4        0x4 00
-                0x000047f8                _etext = .
+                0x0000486c                . = ALIGN (0x4)
+                0x0000486c                __cy_regions = .
+                0x0000486c        0x4 LONG 0x4880 __cy_region_init_ram
+                0x00004870        0x4 LONG 0x1fff8108 __cy_region_start_data
+                0x00004874        0x4 LONG 0x88 __cy_region_init_size_ram
+                0x00004878        0x4 LONG 0x100 __cy_region_zero_size_ram
+                0x0000487c                __cy_regions_end = .
+                0x00004880                . = ALIGN (0x8)
+ *fill*         0x0000487c        0x4 00
+                0x00004880                _etext = .
 
 .ramvectors     0x1fff8000      0x100
                 0x1fff8000                __cy_region_start_ram = .
@@ -1006,7 +1005,7 @@ END GROUP
  .noinit        0x1fff8104        0x1 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
                 0x1fff8104                CyResetStatus
 
-.data           0x1fff8108       0x88 load address 0x000047f8
+.data           0x1fff8108       0x88 load address 0x00004880
                 0x1fff8108                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff8108        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
@@ -1032,10 +1031,10 @@ END GROUP
  *(.ram)
                 0x1fff8190                _edata = .
 
-.igot.plt       0x1fff8190        0x0 load address 0x00004880
+.igot.plt       0x1fff8190        0x0 load address 0x00004908
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
-.bss            0x1fff8190      0x100 load address 0x00004880
+.bss            0x1fff8190      0x100 load address 0x00004908
                 0x1fff8190                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -1093,11 +1092,11 @@ END GROUP
                 0x1fff8290                __end = .
                 0x1fff8290                PROVIDE (end, .)
                 0x1fff8290                PROVIDE (__bss_end__, .)
-                0x000047f8                __cy_region_init_ram = LOADADDR (.data)
+                0x00004880                __cy_region_init_ram = LOADADDR (.data)
                 0x00000088                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x00000100                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff8290     0x1000 load address 0x00004880
+.heap           0x1fff8290     0x1000 load address 0x00004908
                 0x1fff8290                . = _end
                 0x1fff9290                . = (. + 0x1000)
  *fill*         0x1fff8290     0x1000 00
@@ -1146,7 +1145,7 @@ END GROUP
  .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_473\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00004880        0x0 load address 0x9050000c
+.rel.dyn        0x00004908        0x0 load address 0x9050000c
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.0/psoc creator/import/gnu_cs/arm/4.7.3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
 .stab
@@ -1259,28 +1258,28 @@ END GROUP
  .debug_abbrev  0x00001464       0xa7 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_descr.o)
  .debug_abbrev  0x0000150b      0x172 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyFlash.o)
 
-.debug_line     0x00000000     0x24bd
+.debug_line     0x00000000     0x24c5
  *(.debug_line)
- .debug_line    0x00000000      0x13c .\CortexM3\ARM_GCC_473\Debug\main.o
- .debug_line    0x0000013c       0x53 .\CortexM3\ARM_GCC_473\Debug\cymetadata.o
- .debug_line    0x0000018f      0x1b0 .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
- .debug_line    0x0000033f      0x1f1 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
- .debug_line    0x00000530       0xe4 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
- .debug_line    0x00000614      0x2a4 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
- .debug_line    0x000008b8      0x234 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
- .debug_line    0x00000aec      0x222 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
- .debug_line    0x00000d0e       0xe5 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
- .debug_line    0x00000df3      0x431 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
- .debug_line    0x00001224       0x8b .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_vnd.o)
- .debug_line    0x000012af      0x22c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
- .debug_line    0x000014db       0x84 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1_CustChars.o)
- .debug_line    0x0000155f       0x68 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyBootAsmGnu.o)
- .debug_line    0x000015c7      0x73b .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
- .debug_line    0x00001d02      0x370 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyPm.o)
- .debug_line    0x00002072      0x1a7 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
- .debug_line    0x00002219       0x98 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cls.o)
- .debug_line    0x000022b1       0x63 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_descr.o)
- .debug_line    0x00002314      0x1a9 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyFlash.o)
+ .debug_line    0x00000000      0x144 .\CortexM3\ARM_GCC_473\Debug\main.o
+ .debug_line    0x00000144       0x53 .\CortexM3\ARM_GCC_473\Debug\cymetadata.o
+ .debug_line    0x00000197      0x1b0 .\CortexM3\ARM_GCC_473\Debug\Cm3Start.o
+ .debug_line    0x00000347      0x1f1 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyfitter_cfg.o)
+ .debug_line    0x00000538       0xe4 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(DieTemp.o)
+ .debug_line    0x0000061c      0x2a4 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART.o)
+ .debug_line    0x000008c0      0x234 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cdc.o)
+ .debug_line    0x00000af4      0x222 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_drv.o)
+ .debug_line    0x00000d16       0xe5 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_episr.o)
+ .debug_line    0x00000dfb      0x431 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_std.o)
+ .debug_line    0x0000122c       0x8b .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_vnd.o)
+ .debug_line    0x000012b7      0x22c .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1.o)
+ .debug_line    0x000014e3       0x84 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(LCD_Char_1_CustChars.o)
+ .debug_line    0x00001567       0x68 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyBootAsmGnu.o)
+ .debug_line    0x000015cf      0x73b .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyLib.o)
+ .debug_line    0x00001d0a      0x370 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(cyPm.o)
+ .debug_line    0x0000207a      0x1a7 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CySpc.o)
+ .debug_line    0x00002221       0x98 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_cls.o)
+ .debug_line    0x000022b9       0x63 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(USBUART_descr.o)
+ .debug_line    0x0000231c      0x1a9 .\CortexM3\ARM_GCC_473\Debug\TP_Sensor.a(CyFlash.o)
 
 .debug_frame    0x00000000     0x1d9c
  *(.debug_frame)

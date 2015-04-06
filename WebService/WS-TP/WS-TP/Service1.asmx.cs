@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.IO.Ports;
 
 namespace WS_TP
 {
@@ -22,5 +23,28 @@ namespace WS_TP
         {
             return "Hello World";
         }
+
+        [WebMethod]
+        public string ReadPSoC() 
+        {
+            string line = "";
+
+            SerialPort s = new SerialPort("COM3", 9600);
+
+            if (s != null)
+            {
+
+                s.Open();
+                s.WriteLine("OK");
+                line = s.ReadLine();
+                s.Close();
+                return line;
+
+            } else {
+                return "null";
+            }
+
+        }
+
     }
 }

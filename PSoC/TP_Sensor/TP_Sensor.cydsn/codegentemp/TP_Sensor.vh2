@@ -2,7 +2,7 @@
 --	Conversion of TP_Sensor.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Apr 06 16:47:19 2015
+--	Mon Apr 06 17:47:05 2015
 --
 
 USE cypress.cypress.all;

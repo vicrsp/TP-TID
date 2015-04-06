@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="TP_Sensor\TP_Sensor">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="TP_Sensor\TP_Sensor\TP_Sensor.cydwr">
 <ExpandedNodeIds>
 <v>TP_Sensor</v>
 <v>TP_Sensor\TP_Sensor</v>
@@ -280,6 +280,7 @@
 <OpenDocs>
 <name v=".\TP_Sensor.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\TP_Sensor.cydsn\main.c" />
+<name v=".\TP_Sensor.cydsn\TP_Sensor.cydwr" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
