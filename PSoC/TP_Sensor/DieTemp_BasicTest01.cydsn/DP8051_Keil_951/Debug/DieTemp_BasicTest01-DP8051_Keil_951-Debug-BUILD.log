@@ -1,8 +1,0 @@
---------------- Build Started: 04/06/2015 16:45:35 Project: DieTemp_BasicTest01, Configuration: DP8051 Keil 9.51 Debug ---------------
-The code generation step is up to date.
-The compile step is up to date, no work needs to be done.
-The link step is up to date, no work needs to be done.
-cyhextool -o .\DP8051_Keil_951\Debug\DieTemp_BasicTest01.hex -f .\DP8051_Keil_951\Debug\DieTemp_BasicTest01.ihx -prot .\Generated_Source\PSoC3\protect.hex -id 1E028069 -a EEPROM=90200000:800,PROGRAM=00000000:10000,CONFIG=80000000:2000,PROTECT=90400000:40 -meta 0301 -cunv 00004005 -wonv BC90ACAF -ecc .\Generated_Source\PSoC3\config.hex
-Flash used: 4689 of 65536 bytes (7,2%).
-SRAM used: 121 of 8192 bytes (1,5%).
---------------- Build Succeeded: 04/06/2015 16:45:35 ---------------
