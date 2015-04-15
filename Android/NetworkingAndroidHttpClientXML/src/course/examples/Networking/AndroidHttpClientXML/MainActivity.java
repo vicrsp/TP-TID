@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
 	private class HttpGetTask extends AsyncTask<Void, Void, String> {
 
 		// IP deve mudar dependendo do dia
-		private static final String URL = "http://192.168.0.180/WS_TP/Service1.asmx/ReadPSoC";
+		private static final String URL = "http://192.168.0.195/WS_TP/Service1.asmx/ReadPSoC";
 				
 
 		AndroidHttpClient mClient = AndroidHttpClient.newInstance("");

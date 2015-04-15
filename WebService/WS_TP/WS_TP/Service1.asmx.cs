@@ -32,7 +32,7 @@ namespace WS_TP
                 s.WriteLine("OK");
                 line = s.ReadLine();
                 s.Close();
-                return line;
+                return line  + " " + DateTime.Now.ToLongTimeString();
 
             }
             else

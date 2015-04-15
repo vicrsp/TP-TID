@@ -14,10 +14,10 @@ import android.util.Log;
 
 class XMLResponseHandler implements ResponseHandler<String> {
 
-	private static final String TEMP_TAG = "line";
+	private static final String TEMP_TAG = "string";
 
 	private String mResult;
-	private boolean mIsTemp;
+	private boolean mIsTemp = true;
 
 	@Override
 	public String handleResponse(HttpResponse response)
@@ -40,10 +40,10 @@ class XMLResponseHandler implements ResponseHandler<String> {
 				if (eventType == XmlPullParser.START_TAG) {
 					Log.i("XMLResponseHandler", "Start tag");
 					
-					if (xpp.getText().equals(TEMP_TAG))
-						mIsTemp = true;
-					else
-						mIsTemp = false;
+//					if (xpp.getText().equals(TEMP_TAG))
+//						mIsTemp = true;
+//					else
+//						mIsTemp = false;
 						
 				} else if (eventType == XmlPullParser.END_TAG) {
 					Log.i("XMLResponseHandler", "End tag");					
