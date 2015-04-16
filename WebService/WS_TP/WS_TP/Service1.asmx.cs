@@ -10,7 +10,7 @@ namespace WS_TP
     /// <summary>
     /// Summary description for Service1
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://ufmg.br/TPTID/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
@@ -18,12 +18,24 @@ namespace WS_TP
     public class Service1 : System.Web.Services.WebService
     {
 
-        [WebMethod]
+        [WebMethod(EnableSession=true)]
         public string ReadPSoC()
         {
             string line = "";
+            List<string> temperatures;
 
             SerialPort s = new SerialPort("COM3", 9600);
+
+
+            if (Session["READINGS"] == null)
+            {
+                temperatures = new List<string>();
+            }
+            else 
+            {
+                temperatures = (List<string>)Session["READINGS"];
+            }
+
 
             if (s != null)
             {
@@ -32,14 +44,39 @@ namespace WS_TP
                 s.WriteLine("OK");
                 line = s.ReadLine();
                 s.Close();
-                return line  + " " + DateTime.Now.ToLongTimeString();
 
+                line = line + " " + DateTime.Now.ToLongTimeString();
+                temperatures.Add(line);
+                Session["READINGS"] = temperatures;
+
+                return line;
+                
+                    
             }
             else
             {
-                return "null";
+                temperatures.Add("Failed");
+                Session["READINGS"] = temperatures;
+                return "Failed";
             }
 
+        }
+        [WebMethod(EnableSession = true)]
+        public List<string> getReadings() 
+        {
+            if (Session["READINGS"] == null)
+            {
+                List<string> temperatures = new List<string>();
+                temperatures.Add("You have not read anything yet");
+                return temperatures;
+            }
+            else 
+            {
+                return (List<string>)Session["READINGS"];
+            }
+
+        
+        
         }
 
     }

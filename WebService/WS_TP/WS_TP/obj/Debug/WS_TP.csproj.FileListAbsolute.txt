@@ -1,5 +1,4 @@
 C:\Users\Victor Ruela\Desktop\UFMG\2015-1\Integracao de Dados\TP pratico\TP-TID\WebService\WS_TP\WS_TP\bin\WS_TP.dll
 C:\Users\Victor Ruela\Desktop\UFMG\2015-1\Integracao de Dados\TP pratico\TP-TID\WebService\WS_TP\WS_TP\bin\WS_TP.pdb
-C:\Users\Victor Ruela\Desktop\UFMG\2015-1\Integracao de Dados\TP pratico\TP-TID\WebService\WS_TP\WS_TP\obj\Debug\WS_TP.csprojResolveAssemblyReference.cache
 C:\Users\Victor Ruela\Desktop\UFMG\2015-1\Integracao de Dados\TP pratico\TP-TID\WebService\WS_TP\WS_TP\obj\Debug\WS_TP.dll
 C:\Users\Victor Ruela\Desktop\UFMG\2015-1\Integracao de Dados\TP pratico\TP-TID\WebService\WS_TP\WS_TP\obj\Debug\WS_TP.pdb

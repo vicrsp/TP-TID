@@ -1,0 +1,1 @@
+C:\Users\Victor Ruela\Desktop\UFMG\2015-1\Integracao de Dados\TP pratico\TP-TID\WebService\WS_TP\ClienteTP\obj\Debug\ClienteTP.csprojResolveAssemblyReference.cache
