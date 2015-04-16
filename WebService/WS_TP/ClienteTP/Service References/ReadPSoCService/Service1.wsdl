@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ufmg.br/TPTID/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://ufmg.br/TPTID/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ufmg.br/TPTID/">
+      <s:element name="ReadPSoC">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReadPSoCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReadPSoCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReadings">
+        <s:complexType />
+      </s:element>
+      <s:element name="getReadingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getReadingsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReadPSoCSoapIn">
+    <wsdl:part name="parameters" element="tns:ReadPSoC" />
+  </wsdl:message>
+  <wsdl:message name="ReadPSoCSoapOut">
+    <wsdl:part name="parameters" element="tns:ReadPSoCResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReadingsSoapIn">
+    <wsdl:part name="parameters" element="tns:getReadings" />
+  </wsdl:message>
+  <wsdl:message name="getReadingsSoapOut">
+    <wsdl:part name="parameters" element="tns:getReadingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReadPSoCHttpGetIn" />
+  <wsdl:message name="ReadPSoCHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getReadingsHttpGetIn" />
+  <wsdl:message name="getReadingsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ReadPSoCHttpPostIn" />
+  <wsdl:message name="ReadPSoCHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getReadingsHttpPostIn" />
+  <wsdl:message name="getReadingsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="ReadPSoC">
+      <wsdl:input message="tns:ReadPSoCSoapIn" />
+      <wsdl:output message="tns:ReadPSoCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReadings">
+      <wsdl:input message="tns:getReadingsSoapIn" />
+      <wsdl:output message="tns:getReadingsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="ReadPSoC">
+      <wsdl:input message="tns:ReadPSoCHttpGetIn" />
+      <wsdl:output message="tns:ReadPSoCHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReadings">
+      <wsdl:input message="tns:getReadingsHttpGetIn" />
+      <wsdl:output message="tns:getReadingsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="ReadPSoC">
+      <wsdl:input message="tns:ReadPSoCHttpPostIn" />
+      <wsdl:output message="tns:ReadPSoCHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReadings">
+      <wsdl:input message="tns:getReadingsHttpPostIn" />
+      <wsdl:output message="tns:getReadingsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReadPSoC">
+      <soap:operation soapAction="http://ufmg.br/TPTID/ReadPSoC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReadings">
+      <soap:operation soapAction="http://ufmg.br/TPTID/getReadings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReadPSoC">
+      <soap12:operation soapAction="http://ufmg.br/TPTID/ReadPSoC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReadings">
+      <soap12:operation soapAction="http://ufmg.br/TPTID/getReadings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ReadPSoC">
+      <http:operation location="/ReadPSoC" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReadings">
+      <http:operation location="/getReadings" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ReadPSoC">
+      <http:operation location="/ReadPSoC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReadings">
+      <http:operation location="/getReadings" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost/WS_TP/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost/WS_TP/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://localhost/WS_TP/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://localhost/WS_TP/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
