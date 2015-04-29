@@ -1,0 +1,853 @@
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.rodata
+  19              		.align	2
+  20              	.LC0:
+  21 0000 4F4B4B4B 		.ascii	"OKKK\000"
+  21      00
+  22 0005 000000   		.align	2
+  23              	.LC1:
+  24 0008 41677561 		.ascii	"Aguardando\000"
+  24      7264616E 
+  24      646F00
+  25 0013 00       		.align	2
+  26              	.LC2:
+  27 0014 54656D70 		.ascii	"Temp = \000"
+  27      203D2000 
+  28              		.align	2
+  29              	.LC3:
+  30 001c 2B00     		.ascii	"+\000"
+  31 001e 0000     		.align	2
+  32              	.LC4:
+  33 0020 2D00     		.ascii	"-\000"
+  34 0022 0000     		.align	2
+  35              	.LC5:
+  36 0024 2000     		.ascii	" \000"
+  37 0026 0000     		.align	2
+  38              	.LC6:
+  39 0028 4300     		.ascii	"C\000"
+  40 002a 0000     		.align	2
+  41              	.LC7:
+  42 002c 25640A00 		.ascii	"%d\012\000"
+  43              		.section	.text.main,"ax",%progbits
+  44              		.align	2
+  45              		.global	main
+  46              		.thumb
+  47              		.thumb_func
+  48              		.type	main, %function
+  49              	main:
+  50              	.LFB56:
+  51              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      ****  *
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 2
+
+
+   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\main.c      ****  * All Rights Reserved
+   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\main.c      ****  *
+   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\main.c      ****  *
+  10:.\main.c      ****  * ========================================
+  11:.\main.c      **** */
+  12:.\main.c      **** #include <project.h>
+  13:.\main.c      **** #include <stdio.h>
+  14:.\main.c      **** 
+  15:.\main.c      **** 
+  16:.\main.c      **** 
+  17:.\main.c      **** int main()
+  18:.\main.c      **** {
+  52              		.loc 1 18 0
+  53              		.cfi_startproc
+  54              		@ args = 0, pretend = 0, frame = 144
+  55              		@ frame_needed = 1, uses_anonymous_args = 0
+  56 0000 80B5     		push	{r7, lr}
+  57              		.cfi_def_cfa_offset 8
+  58              		.cfi_offset 7, -8
+  59              		.cfi_offset 14, -4
+  60 0002 A4B0     		sub	sp, sp, #144
+  61              		.cfi_def_cfa_offset 152
+  62 0004 00AF     		add	r7, sp, #0
+  63              		.cfi_def_cfa_register 7
+  19:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  20:.\main.c      ****     // Initialize USB
+  21:.\main.c      ****     USBUART_Start(0u, USBUART_3V_OPERATION);
+  64              		.loc 1 21 0
+  65 0006 0020     		movs	r0, #0
+  66 0008 0021     		movs	r1, #0
+  67 000a FFF7FEFF 		bl	USBUART_Start
+  22:.\main.c      **** 
+  23:.\main.c      ****     int16 temperature;
+  24:.\main.c      ****     cystatus Status;
+  25:.\main.c      ****     uint8 count;
+  26:.\main.c      ****     
+  27:.\main.c      ****     LCD_Char_1_Start();
+  68              		.loc 1 27 0
+  69 000e FFF7FEFF 		bl	LCD_Char_1_Start
+  28:.\main.c      ****     
+  29:.\main.c      ****     LCD_Char_1_Position(1u, 0u);
+  70              		.loc 1 29 0
+  71 0012 0120     		movs	r0, #1
+  72 0014 0021     		movs	r1, #0
+  73 0016 FFF7FEFF 		bl	LCD_Char_1_Position
+  30:.\main.c      ****     LCD_Char_1_PrintString("OKKK");
+  74              		.loc 1 30 0
+  75 001a 4348     		ldr	r0, .L8
+  76 001c FFF7FEFF 		bl	LCD_Char_1_PrintString
+  31:.\main.c      ****     
+  32:.\main.c      ****     CyGlobalIntEnable; 
+  77              		.loc 1 32 0
+  78              	@ 32 ".\main.c" 1
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 3
+
+
+  79 0020 62B6     		CPSIE   i
+  80              	@ 0 "" 2
+  33:.\main.c      ****     
+  34:.\main.c      ****     // Wait for USB
+  35:.\main.c      ****     while (!USBUART_GetConfiguration());
+  81              		.loc 1 35 0
+  82              		.thumb
+  83 0022 00BF     		nop
+  84              	.L2:
+  85              		.loc 1 35 0 is_stmt 0 discriminator 1
+  86 0024 FFF7FEFF 		bl	USBUART_GetConfiguration
+  87 0028 0346     		mov	r3, r0
+  88 002a 002B     		cmp	r3, #0
+  89 002c FAD0     		beq	.L2
+  36:.\main.c      ****     USBUART_CDC_Init();
+  90              		.loc 1 36 0 is_stmt 1
+  91 002e FFF7FEFF 		bl	USBUART_CDC_Init
+  37:.\main.c      **** 
+  38:.\main.c      ****     char8 usbBuffer[64] = "";
+  92              		.loc 1 38 0
+  93 0032 0023     		movs	r3, #0
+  94 0034 7B64     		str	r3, [r7, #68]
+  95 0036 07F14802 		add	r2, r7, #72
+  96 003a 3C23     		movs	r3, #60
+  97 003c 1046     		mov	r0, r2
+  98 003e 0021     		movs	r1, #0
+  99 0040 1A46     		mov	r2, r3
+ 100 0042 FFF7FEFF 		bl	memset
+  39:.\main.c      ****     uint8 buffer[64] = "";
+ 101              		.loc 1 39 0
+ 102 0046 0023     		movs	r3, #0
+ 103 0048 7B60     		str	r3, [r7, #4]
+ 104 004a 07F10802 		add	r2, r7, #8
+ 105 004e 3C23     		movs	r3, #60
+ 106 0050 1046     		mov	r0, r2
+ 107 0052 0021     		movs	r1, #0
+ 108 0054 1A46     		mov	r2, r3
+ 109 0056 FFF7FEFF 		bl	memset
+ 110              	.L7:
+  40:.\main.c      ****     
+  41:.\main.c      ****     for(;;)
+  42:.\main.c      ****     {
+  43:.\main.c      ****         /* Place your application code here. */
+  44:.\main.c      ****         
+  45:.\main.c      ****          CyDelay(50);
+ 111              		.loc 1 45 0
+ 112 005a 3220     		movs	r0, #50
+ 113 005c FFF7FEFF 		bl	CyDelay
+  46:.\main.c      ****          LCD_Char_1_Position(0u, 0u);
+ 114              		.loc 1 46 0
+ 115 0060 0020     		movs	r0, #0
+ 116 0062 0021     		movs	r1, #0
+ 117 0064 FFF7FEFF 		bl	LCD_Char_1_Position
+  47:.\main.c      ****          LCD_Char_1_PrintString("Aguardando");
+ 118              		.loc 1 47 0
+ 119 0068 3048     		ldr	r0, .L8+4
+ 120 006a FFF7FEFF 		bl	LCD_Char_1_PrintString
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 4
+
+
+  48:.\main.c      ****        
+  49:.\main.c      ****         // Wait for temperature read command
+  50:.\main.c      ****         if(USBUART_DataIsReady() != 0u)               /* Check for input data from PC */
+ 121              		.loc 1 50 0
+ 122 006e FFF7FEFF 		bl	USBUART_DataIsReady
+ 123 0072 0346     		mov	r3, r0
+ 124 0074 002B     		cmp	r3, #0
+ 125 0076 55D0     		beq	.L3
+  51:.\main.c      ****         {   
+  52:.\main.c      ****             count = USBUART_GetAll(buffer);           /* Read received data and re-enable OUT endpo
+ 126              		.loc 1 52 0
+ 127 0078 3B1D     		adds	r3, r7, #4
+ 128 007a 1846     		mov	r0, r3
+ 129 007c FFF7FEFF 		bl	USBUART_GetAll
+ 130 0080 0346     		mov	r3, r0
+ 131 0082 87F88F30 		strb	r3, [r7, #143]
+  53:.\main.c      ****           
+  54:.\main.c      ****             // Read data from sensor
+  55:.\main.c      ****             
+  56:.\main.c      ****             Status = DieTemp_GetTemp(&temperature);
+ 132              		.loc 1 56 0
+ 133 0086 07F18603 		add	r3, r7, #134
+ 134 008a 1846     		mov	r0, r3
+ 135 008c FFF7FEFF 		bl	DieTemp_GetTemp
+ 136 0090 C7F88800 		str	r0, [r7, #136]
+  57:.\main.c      **** 
+  58:.\main.c      ****              /* Displaying the Die Temperature value on the LCD */
+  59:.\main.c      ****             LCD_Char_1_Position(0u, 0u);
+ 137              		.loc 1 59 0
+ 138 0094 0020     		movs	r0, #0
+ 139 0096 0021     		movs	r1, #0
+ 140 0098 FFF7FEFF 		bl	LCD_Char_1_Position
+  60:.\main.c      ****             LCD_Char_1_PrintString("Temp = ");
+ 141              		.loc 1 60 0
+ 142 009c 2448     		ldr	r0, .L8+8
+ 143 009e FFF7FEFF 		bl	LCD_Char_1_PrintString
+  61:.\main.c      **** 
+  62:.\main.c      ****             if (temperature >= 0 )
+ 144              		.loc 1 62 0
+ 145 00a2 B7F88630 		ldrh	r3, [r7, #134]
+ 146 00a6 1BB2     		sxth	r3, r3
+ 147 00a8 002B     		cmp	r3, #0
+ 148 00aa 03DB     		blt	.L4
+  63:.\main.c      ****             {
+  64:.\main.c      ****                 LCD_Char_1_PrintString("+");
+ 149              		.loc 1 64 0
+ 150 00ac 2148     		ldr	r0, .L8+12
+ 151 00ae FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 152 00b2 0AE0     		b	.L5
+ 153              	.L4:
+  65:.\main.c      ****             }
+  66:.\main.c      ****             else
+  67:.\main.c      ****             {
+  68:.\main.c      ****                 /* If the temperature value is negative, display "-" sign and make value positive *
+  69:.\main.c      ****                 LCD_Char_1_PrintString("-");
+ 154              		.loc 1 69 0
+ 155 00b4 2048     		ldr	r0, .L8+16
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 5
+
+
+ 156 00b6 FFF7FEFF 		bl	LCD_Char_1_PrintString
+  70:.\main.c      ****                 temperature = (uint16)(~temperature + 1u);
+ 157              		.loc 1 70 0
+ 158 00ba B7F88630 		ldrh	r3, [r7, #134]
+ 159 00be 9BB2     		uxth	r3, r3
+ 160 00c0 5B42     		negs	r3, r3
+ 161 00c2 9BB2     		uxth	r3, r3
+ 162 00c4 9BB2     		uxth	r3, r3
+ 163 00c6 A7F88630 		strh	r3, [r7, #134]	@ movhi
+ 164              	.L5:
+  71:.\main.c      ****             }
+  72:.\main.c      ****             
+  73:.\main.c      ****             LCD_Char_1_PrintNumber((uint16) (temperature));
+ 165              		.loc 1 73 0
+ 166 00ca B7F88630 		ldrh	r3, [r7, #134]
+ 167 00ce 9BB2     		uxth	r3, r3
+ 168 00d0 1846     		mov	r0, r3
+ 169 00d2 FFF7FEFF 		bl	LCD_Char_1_PrintU32Number
+  74:.\main.c      ****             LCD_Char_1_PrintString(" ");
+ 170              		.loc 1 74 0
+ 171 00d6 1948     		ldr	r0, .L8+20
+ 172 00d8 FFF7FEFF 		bl	LCD_Char_1_PrintString
+  75:.\main.c      ****             
+  76:.\main.c      ****             LCD_Char_1_PutChar(LCD_Char_1_CUSTOM_7);
+ 173              		.loc 1 76 0
+ 174 00dc 0720     		movs	r0, #7
+ 175 00de FFF7FEFF 		bl	LCD_Char_1_PutChar
+  77:.\main.c      ****             LCD_Char_1_PrintString("C");
+ 176              		.loc 1 77 0
+ 177 00e2 1748     		ldr	r0, .L8+24
+ 178 00e4 FFF7FEFF 		bl	LCD_Char_1_PrintString
+  78:.\main.c      **** 
+  79:.\main.c      ****             LCD_Char_1_Position(1u, 0u);            
+ 179              		.loc 1 79 0
+ 180 00e8 0120     		movs	r0, #1
+ 181 00ea 0021     		movs	r1, #0
+ 182 00ec FFF7FEFF 		bl	LCD_Char_1_Position
+  80:.\main.c      ****             LCD_Char_1_PrintNumber(buffer[0]);
+ 183              		.loc 1 80 0
+ 184 00f0 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 185 00f2 1846     		mov	r0, r3
+ 186 00f4 FFF7FEFF 		bl	LCD_Char_1_PrintU32Number
+  81:.\main.c      ****             
+  82:.\main.c      ****             
+  83:.\main.c      ****             sprintf(usbBuffer,"%d\n", temperature);
+ 187              		.loc 1 83 0
+ 188 00f8 B7F88630 		ldrh	r3, [r7, #134]
+ 189 00fc 1BB2     		sxth	r3, r3
+ 190 00fe 07F14402 		add	r2, r7, #68
+ 191 0102 1046     		mov	r0, r2
+ 192 0104 0F49     		ldr	r1, .L8+28
+ 193 0106 1A46     		mov	r2, r3
+ 194 0108 FFF7FEFF 		bl	sprintf
+  84:.\main.c      **** 
+  85:.\main.c      ****             // Send the data read
+  86:.\main.c      ****             while(USBUART_CDCIsReady() == 0u);
+ 195              		.loc 1 86 0
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 6
+
+
+ 196 010c 00BF     		nop
+ 197              	.L6:
+ 198              		.loc 1 86 0 is_stmt 0 discriminator 1
+ 199 010e FFF7FEFF 		bl	USBUART_CDCIsReady
+ 200 0112 0346     		mov	r3, r0
+ 201 0114 002B     		cmp	r3, #0
+ 202 0116 FAD0     		beq	.L6
+  87:.\main.c      ****             USBUART_PutString(usbBuffer);
+ 203              		.loc 1 87 0 is_stmt 1
+ 204 0118 07F14403 		add	r3, r7, #68
+ 205 011c 1846     		mov	r0, r3
+ 206 011e FFF7FEFF 		bl	USBUART_PutString
+  88:.\main.c      ****         }
+  89:.\main.c      ****     }
+ 207              		.loc 1 89 0
+ 208 0122 9AE7     		b	.L7
+ 209              	.L3:
+ 210 0124 99E7     		b	.L7
+ 211              	.L9:
+ 212 0126 00BF     		.align	2
+ 213              	.L8:
+ 214 0128 00000000 		.word	.LC0
+ 215 012c 08000000 		.word	.LC1
+ 216 0130 14000000 		.word	.LC2
+ 217 0134 1C000000 		.word	.LC3
+ 218 0138 20000000 		.word	.LC4
+ 219 013c 24000000 		.word	.LC5
+ 220 0140 28000000 		.word	.LC6
+ 221 0144 2C000000 		.word	.LC7
+ 222              		.cfi_endproc
+ 223              	.LFE56:
+ 224              		.size	main, .-main
+ 225              		.text
+ 226              	.Letext0:
+ 227              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.1\\psoc creator\\import\\gnu_cs\\arm\\4
+ 228              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.1\\psoc creator\\import\\gnu_cs\\arm\\4
+ 229              		.file 4 ".\\Generated_Source\\PSoC5/cytypes.h"
+ 230              		.file 5 ".\\Generated_Source\\PSoC5/core_cm3.h"
+ 231              		.section	.debug_info,"",%progbits
+ 232              	.Ldebug_info0:
+ 233 0000 64010000 		.4byte	0x164
+ 234 0004 0400     		.2byte	0x4
+ 235 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 236 000a 04       		.byte	0x4
+ 237 000b 01       		.uleb128 0x1
+ 238 000c 31010000 		.4byte	.LASF25
+ 239 0010 01       		.byte	0x1
+ 240 0011 20000000 		.4byte	.LASF26
+ 241 0015 43000000 		.4byte	.LASF27
+ 242 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 243 001d 00000000 		.4byte	0
+ 244 0021 00000000 		.4byte	.Ldebug_line0
+ 245 0025 02       		.uleb128 0x2
+ 246 0026 01       		.byte	0x1
+ 247 0027 06       		.byte	0x6
+ 248 0028 F7010000 		.4byte	.LASF0
+ 249 002c 02       		.uleb128 0x2
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 7
+
+
+ 250 002d 01       		.byte	0x1
+ 251 002e 08       		.byte	0x8
+ 252 002f 35000000 		.4byte	.LASF1
+ 253 0033 02       		.uleb128 0x2
+ 254 0034 02       		.byte	0x2
+ 255 0035 05       		.byte	0x5
+ 256 0036 D7010000 		.4byte	.LASF2
+ 257 003a 02       		.uleb128 0x2
+ 258 003b 02       		.byte	0x2
+ 259 003c 07       		.byte	0x7
+ 260 003d D0000000 		.4byte	.LASF3
+ 261 0041 03       		.uleb128 0x3
+ 262 0042 0F000000 		.4byte	.LASF9
+ 263 0046 02       		.byte	0x2
+ 264 0047 37       		.byte	0x37
+ 265 0048 4C000000 		.4byte	0x4c
+ 266 004c 02       		.uleb128 0x2
+ 267 004d 04       		.byte	0x4
+ 268 004e 05       		.byte	0x5
+ 269 004f EE010000 		.4byte	.LASF4
+ 270 0053 02       		.uleb128 0x2
+ 271 0054 04       		.byte	0x4
+ 272 0055 07       		.byte	0x7
+ 273 0056 BE000000 		.4byte	.LASF5
+ 274 005a 02       		.uleb128 0x2
+ 275 005b 08       		.byte	0x8
+ 276 005c 05       		.byte	0x5
+ 277 005d BE010000 		.4byte	.LASF6
+ 278 0061 02       		.uleb128 0x2
+ 279 0062 08       		.byte	0x8
+ 280 0063 07       		.byte	0x7
+ 281 0064 10010000 		.4byte	.LASF7
+ 282 0068 04       		.uleb128 0x4
+ 283 0069 04       		.byte	0x4
+ 284 006a 05       		.byte	0x5
+ 285 006b 696E7400 		.ascii	"int\000"
+ 286 006f 02       		.uleb128 0x2
+ 287 0070 04       		.byte	0x4
+ 288 0071 07       		.byte	0x7
+ 289 0072 03010000 		.4byte	.LASF8
+ 290 0076 03       		.uleb128 0x3
+ 291 0077 AD010000 		.4byte	.LASF10
+ 292 007b 03       		.byte	0x3
+ 293 007c 41       		.byte	0x41
+ 294 007d 41000000 		.4byte	0x41
+ 295 0081 03       		.uleb128 0x3
+ 296 0082 E8010000 		.4byte	.LASF11
+ 297 0086 04       		.byte	0x4
+ 298 0087 5B       		.byte	0x5b
+ 299 0088 2C000000 		.4byte	0x2c
+ 300 008c 03       		.uleb128 0x3
+ 301 008d FC000000 		.4byte	.LASF12
+ 302 0091 04       		.byte	0x4
+ 303 0092 5C       		.byte	0x5c
+ 304 0093 3A000000 		.4byte	0x3a
+ 305 0097 03       		.uleb128 0x3
+ 306 0098 B8000000 		.4byte	.LASF13
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 8
+
+
+ 307 009c 04       		.byte	0x4
+ 308 009d 5F       		.byte	0x5f
+ 309 009e 33000000 		.4byte	0x33
+ 310 00a2 02       		.uleb128 0x2
+ 311 00a3 04       		.byte	0x4
+ 312 00a4 04       		.byte	0x4
+ 313 00a5 09000000 		.4byte	.LASF14
+ 314 00a9 02       		.uleb128 0x2
+ 315 00aa 08       		.byte	0x8
+ 316 00ab 04       		.byte	0x4
+ 317 00ac F0000000 		.4byte	.LASF15
+ 318 00b0 03       		.uleb128 0x3
+ 319 00b1 B2000000 		.4byte	.LASF16
+ 320 00b5 04       		.byte	0x4
+ 321 00b6 6C       		.byte	0x6c
+ 322 00b7 BB000000 		.4byte	0xbb
+ 323 00bb 02       		.uleb128 0x2
+ 324 00bc 01       		.byte	0x1
+ 325 00bd 08       		.byte	0x8
+ 326 00be CC010000 		.4byte	.LASF17
+ 327 00c2 03       		.uleb128 0x3
+ 328 00c3 00000000 		.4byte	.LASF18
+ 329 00c7 04       		.byte	0x4
+ 330 00c8 E8       		.byte	0xe8
+ 331 00c9 53000000 		.4byte	0x53
+ 332 00cd 02       		.uleb128 0x2
+ 333 00ce 04       		.byte	0x4
+ 334 00cf 07       		.byte	0x7
+ 335 00d0 B5010000 		.4byte	.LASF19
+ 336 00d4 05       		.uleb128 0x5
+ 337 00d5 F7000000 		.4byte	.LASF28
+ 338 00d9 01       		.byte	0x1
+ 339 00da 11       		.byte	0x11
+ 340 00db 68000000 		.4byte	0x68
+ 341 00df 00000000 		.4byte	.LFB56
+ 342 00e3 48010000 		.4byte	.LFE56-.LFB56
+ 343 00e7 01       		.uleb128 0x1
+ 344 00e8 9C       		.byte	0x9c
+ 345 00e9 36010000 		.4byte	0x136
+ 346 00ed 06       		.uleb128 0x6
+ 347 00ee 29000000 		.4byte	.LASF20
+ 348 00f2 01       		.byte	0x1
+ 349 00f3 17       		.byte	0x17
+ 350 00f4 97000000 		.4byte	0x97
+ 351 00f8 02       		.uleb128 0x2
+ 352 00f9 91       		.byte	0x91
+ 353 00fa 6E       		.sleb128 -18
+ 354 00fb 06       		.uleb128 0x6
+ 355 00fc 19000000 		.4byte	.LASF21
+ 356 0100 01       		.byte	0x1
+ 357 0101 18       		.byte	0x18
+ 358 0102 C2000000 		.4byte	0xc2
+ 359 0106 02       		.uleb128 0x2
+ 360 0107 91       		.byte	0x91
+ 361 0108 70       		.sleb128 -16
+ 362 0109 06       		.uleb128 0x6
+ 363 010a D1010000 		.4byte	.LASF22
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 9
+
+
+ 364 010e 01       		.byte	0x1
+ 365 010f 19       		.byte	0x19
+ 366 0110 81000000 		.4byte	0x81
+ 367 0114 02       		.uleb128 0x2
+ 368 0115 91       		.byte	0x91
+ 369 0116 77       		.sleb128 -9
+ 370 0117 06       		.uleb128 0x6
+ 371 0118 27010000 		.4byte	.LASF23
+ 372 011c 01       		.byte	0x1
+ 373 011d 26       		.byte	0x26
+ 374 011e 36010000 		.4byte	0x136
+ 375 0122 03       		.uleb128 0x3
+ 376 0123 91       		.byte	0x91
+ 377 0124 AC7F     		.sleb128 -84
+ 378 0126 06       		.uleb128 0x6
+ 379 0127 E1010000 		.4byte	.LASF24
+ 380 012b 01       		.byte	0x1
+ 381 012c 27       		.byte	0x27
+ 382 012d 46010000 		.4byte	0x146
+ 383 0131 03       		.uleb128 0x3
+ 384 0132 91       		.byte	0x91
+ 385 0133 EC7E     		.sleb128 -148
+ 386 0135 00       		.byte	0
+ 387 0136 07       		.uleb128 0x7
+ 388 0137 B0000000 		.4byte	0xb0
+ 389 013b 46010000 		.4byte	0x146
+ 390 013f 08       		.uleb128 0x8
+ 391 0140 CD000000 		.4byte	0xcd
+ 392 0144 3F       		.byte	0x3f
+ 393 0145 00       		.byte	0
+ 394 0146 07       		.uleb128 0x7
+ 395 0147 81000000 		.4byte	0x81
+ 396 014b 56010000 		.4byte	0x156
+ 397 014f 08       		.uleb128 0x8
+ 398 0150 CD000000 		.4byte	0xcd
+ 399 0154 3F       		.byte	0x3f
+ 400 0155 00       		.byte	0
+ 401 0156 09       		.uleb128 0x9
+ 402 0157 E3000000 		.4byte	.LASF29
+ 403 015b 05       		.byte	0x5
+ 404 015c 1606     		.2byte	0x616
+ 405 015e 62010000 		.4byte	0x162
+ 406 0162 0A       		.uleb128 0xa
+ 407 0163 76000000 		.4byte	0x76
+ 408 0167 00       		.byte	0
+ 409              		.section	.debug_abbrev,"",%progbits
+ 410              	.Ldebug_abbrev0:
+ 411 0000 01       		.uleb128 0x1
+ 412 0001 11       		.uleb128 0x11
+ 413 0002 01       		.byte	0x1
+ 414 0003 25       		.uleb128 0x25
+ 415 0004 0E       		.uleb128 0xe
+ 416 0005 13       		.uleb128 0x13
+ 417 0006 0B       		.uleb128 0xb
+ 418 0007 03       		.uleb128 0x3
+ 419 0008 0E       		.uleb128 0xe
+ 420 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 10
+
+
+ 421 000a 0E       		.uleb128 0xe
+ 422 000b 55       		.uleb128 0x55
+ 423 000c 17       		.uleb128 0x17
+ 424 000d 11       		.uleb128 0x11
+ 425 000e 01       		.uleb128 0x1
+ 426 000f 10       		.uleb128 0x10
+ 427 0010 17       		.uleb128 0x17
+ 428 0011 00       		.byte	0
+ 429 0012 00       		.byte	0
+ 430 0013 02       		.uleb128 0x2
+ 431 0014 24       		.uleb128 0x24
+ 432 0015 00       		.byte	0
+ 433 0016 0B       		.uleb128 0xb
+ 434 0017 0B       		.uleb128 0xb
+ 435 0018 3E       		.uleb128 0x3e
+ 436 0019 0B       		.uleb128 0xb
+ 437 001a 03       		.uleb128 0x3
+ 438 001b 0E       		.uleb128 0xe
+ 439 001c 00       		.byte	0
+ 440 001d 00       		.byte	0
+ 441 001e 03       		.uleb128 0x3
+ 442 001f 16       		.uleb128 0x16
+ 443 0020 00       		.byte	0
+ 444 0021 03       		.uleb128 0x3
+ 445 0022 0E       		.uleb128 0xe
+ 446 0023 3A       		.uleb128 0x3a
+ 447 0024 0B       		.uleb128 0xb
+ 448 0025 3B       		.uleb128 0x3b
+ 449 0026 0B       		.uleb128 0xb
+ 450 0027 49       		.uleb128 0x49
+ 451 0028 13       		.uleb128 0x13
+ 452 0029 00       		.byte	0
+ 453 002a 00       		.byte	0
+ 454 002b 04       		.uleb128 0x4
+ 455 002c 24       		.uleb128 0x24
+ 456 002d 00       		.byte	0
+ 457 002e 0B       		.uleb128 0xb
+ 458 002f 0B       		.uleb128 0xb
+ 459 0030 3E       		.uleb128 0x3e
+ 460 0031 0B       		.uleb128 0xb
+ 461 0032 03       		.uleb128 0x3
+ 462 0033 08       		.uleb128 0x8
+ 463 0034 00       		.byte	0
+ 464 0035 00       		.byte	0
+ 465 0036 05       		.uleb128 0x5
+ 466 0037 2E       		.uleb128 0x2e
+ 467 0038 01       		.byte	0x1
+ 468 0039 3F       		.uleb128 0x3f
+ 469 003a 19       		.uleb128 0x19
+ 470 003b 03       		.uleb128 0x3
+ 471 003c 0E       		.uleb128 0xe
+ 472 003d 3A       		.uleb128 0x3a
+ 473 003e 0B       		.uleb128 0xb
+ 474 003f 3B       		.uleb128 0x3b
+ 475 0040 0B       		.uleb128 0xb
+ 476 0041 49       		.uleb128 0x49
+ 477 0042 13       		.uleb128 0x13
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 11
+
+
+ 478 0043 11       		.uleb128 0x11
+ 479 0044 01       		.uleb128 0x1
+ 480 0045 12       		.uleb128 0x12
+ 481 0046 06       		.uleb128 0x6
+ 482 0047 40       		.uleb128 0x40
+ 483 0048 18       		.uleb128 0x18
+ 484 0049 9642     		.uleb128 0x2116
+ 485 004b 19       		.uleb128 0x19
+ 486 004c 01       		.uleb128 0x1
+ 487 004d 13       		.uleb128 0x13
+ 488 004e 00       		.byte	0
+ 489 004f 00       		.byte	0
+ 490 0050 06       		.uleb128 0x6
+ 491 0051 34       		.uleb128 0x34
+ 492 0052 00       		.byte	0
+ 493 0053 03       		.uleb128 0x3
+ 494 0054 0E       		.uleb128 0xe
+ 495 0055 3A       		.uleb128 0x3a
+ 496 0056 0B       		.uleb128 0xb
+ 497 0057 3B       		.uleb128 0x3b
+ 498 0058 0B       		.uleb128 0xb
+ 499 0059 49       		.uleb128 0x49
+ 500 005a 13       		.uleb128 0x13
+ 501 005b 02       		.uleb128 0x2
+ 502 005c 18       		.uleb128 0x18
+ 503 005d 00       		.byte	0
+ 504 005e 00       		.byte	0
+ 505 005f 07       		.uleb128 0x7
+ 506 0060 01       		.uleb128 0x1
+ 507 0061 01       		.byte	0x1
+ 508 0062 49       		.uleb128 0x49
+ 509 0063 13       		.uleb128 0x13
+ 510 0064 01       		.uleb128 0x1
+ 511 0065 13       		.uleb128 0x13
+ 512 0066 00       		.byte	0
+ 513 0067 00       		.byte	0
+ 514 0068 08       		.uleb128 0x8
+ 515 0069 21       		.uleb128 0x21
+ 516 006a 00       		.byte	0
+ 517 006b 49       		.uleb128 0x49
+ 518 006c 13       		.uleb128 0x13
+ 519 006d 2F       		.uleb128 0x2f
+ 520 006e 0B       		.uleb128 0xb
+ 521 006f 00       		.byte	0
+ 522 0070 00       		.byte	0
+ 523 0071 09       		.uleb128 0x9
+ 524 0072 34       		.uleb128 0x34
+ 525 0073 00       		.byte	0
+ 526 0074 03       		.uleb128 0x3
+ 527 0075 0E       		.uleb128 0xe
+ 528 0076 3A       		.uleb128 0x3a
+ 529 0077 0B       		.uleb128 0xb
+ 530 0078 3B       		.uleb128 0x3b
+ 531 0079 05       		.uleb128 0x5
+ 532 007a 49       		.uleb128 0x49
+ 533 007b 13       		.uleb128 0x13
+ 534 007c 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 12
+
+
+ 535 007d 19       		.uleb128 0x19
+ 536 007e 3C       		.uleb128 0x3c
+ 537 007f 19       		.uleb128 0x19
+ 538 0080 00       		.byte	0
+ 539 0081 00       		.byte	0
+ 540 0082 0A       		.uleb128 0xa
+ 541 0083 35       		.uleb128 0x35
+ 542 0084 00       		.byte	0
+ 543 0085 49       		.uleb128 0x49
+ 544 0086 13       		.uleb128 0x13
+ 545 0087 00       		.byte	0
+ 546 0088 00       		.byte	0
+ 547 0089 00       		.byte	0
+ 548              		.section	.debug_aranges,"",%progbits
+ 549 0000 1C000000 		.4byte	0x1c
+ 550 0004 0200     		.2byte	0x2
+ 551 0006 00000000 		.4byte	.Ldebug_info0
+ 552 000a 04       		.byte	0x4
+ 553 000b 00       		.byte	0
+ 554 000c 0000     		.2byte	0
+ 555 000e 0000     		.2byte	0
+ 556 0010 00000000 		.4byte	.LFB56
+ 557 0014 48010000 		.4byte	.LFE56-.LFB56
+ 558 0018 00000000 		.4byte	0
+ 559 001c 00000000 		.4byte	0
+ 560              		.section	.debug_ranges,"",%progbits
+ 561              	.Ldebug_ranges0:
+ 562 0000 00000000 		.4byte	.LFB56
+ 563 0004 48010000 		.4byte	.LFE56
+ 564 0008 00000000 		.4byte	0
+ 565 000c 00000000 		.4byte	0
+ 566              		.section	.debug_line,"",%progbits
+ 567              	.Ldebug_line0:
+ 568 0000 93010000 		.section	.debug_str,"MS",%progbits,1
+ 568      02005101 
+ 568      00000201 
+ 568      FB0E0D00 
+ 568      01010101 
+ 569              	.LASF18:
+ 570 0000 63797374 		.ascii	"cystatus\000"
+ 570      61747573 
+ 570      00
+ 571              	.LASF14:
+ 572 0009 666C6F61 		.ascii	"float\000"
+ 572      7400
+ 573              	.LASF9:
+ 574 000f 5F5F696E 		.ascii	"__int32_t\000"
+ 574      7433325F 
+ 574      7400
+ 575              	.LASF21:
+ 576 0019 53746174 		.ascii	"Status\000"
+ 576      757300
+ 577              	.LASF26:
+ 578 0020 2E5C6D61 		.ascii	".\\main.c\000"
+ 578      696E2E63 
+ 578      00
+ 579              	.LASF20:
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 13
+
+
+ 580 0029 74656D70 		.ascii	"temperature\000"
+ 580      65726174 
+ 580      75726500 
+ 581              	.LASF1:
+ 582 0035 756E7369 		.ascii	"unsigned char\000"
+ 582      676E6564 
+ 582      20636861 
+ 582      7200
+ 583              	.LASF27:
+ 584 0043 433A5C55 		.ascii	"C:\\Users\\Victor Ruela\\Desktop\\UFMG\\2015-1\\Int"
+ 584      73657273 
+ 584      5C566963 
+ 584      746F7220 
+ 584      5275656C 
+ 585 0070 65677261 		.ascii	"egracao de Dados\\TP pratico\\TP-TID\\PSoC\\TP_Sens"
+ 585      63616F20 
+ 585      64652044 
+ 585      61646F73 
+ 585      5C545020 
+ 586 009f 6F725C54 		.ascii	"or\\TP_Sensor.cydsn\000"
+ 586      505F5365 
+ 586      6E736F72 
+ 586      2E637964 
+ 586      736E00
+ 587              	.LASF16:
+ 588 00b2 63686172 		.ascii	"char8\000"
+ 588      3800
+ 589              	.LASF13:
+ 590 00b8 696E7431 		.ascii	"int16\000"
+ 590      3600
+ 591              	.LASF5:
+ 592 00be 6C6F6E67 		.ascii	"long unsigned int\000"
+ 592      20756E73 
+ 592      69676E65 
+ 592      6420696E 
+ 592      7400
+ 593              	.LASF3:
+ 594 00d0 73686F72 		.ascii	"short unsigned int\000"
+ 594      7420756E 
+ 594      7369676E 
+ 594      65642069 
+ 594      6E7400
+ 595              	.LASF29:
+ 596 00e3 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 596      52784275 
+ 596      66666572 
+ 596      00
+ 597              	.LASF15:
+ 598 00f0 646F7562 		.ascii	"double\000"
+ 598      6C6500
+ 599              	.LASF28:
+ 600 00f7 6D61696E 		.ascii	"main\000"
+ 600      00
+ 601              	.LASF12:
+ 602 00fc 75696E74 		.ascii	"uint16\000"
+ 602      313600
+ 603              	.LASF8:
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 14
+
+
+ 604 0103 756E7369 		.ascii	"unsigned int\000"
+ 604      676E6564 
+ 604      20696E74 
+ 604      00
+ 605              	.LASF7:
+ 606 0110 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 606      206C6F6E 
+ 606      6720756E 
+ 606      7369676E 
+ 606      65642069 
+ 607              	.LASF23:
+ 608 0127 75736242 		.ascii	"usbBuffer\000"
+ 608      75666665 
+ 608      7200
+ 609              	.LASF25:
+ 610 0131 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 610      4320342E 
+ 610      382E3420 
+ 610      32303134 
+ 610      30353236 
+ 611 0164 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 611      20726576 
+ 611      6973696F 
+ 611      6E203231 
+ 611      31333538 
+ 612 0197 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 612      66756E63 
+ 612      74696F6E 
+ 612      2D736563 
+ 612      74696F6E 
+ 613              	.LASF10:
+ 614 01ad 696E7433 		.ascii	"int32_t\000"
+ 614      325F7400 
+ 615              	.LASF19:
+ 616 01b5 73697A65 		.ascii	"sizetype\000"
+ 616      74797065 
+ 616      00
+ 617              	.LASF6:
+ 618 01be 6C6F6E67 		.ascii	"long long int\000"
+ 618      206C6F6E 
+ 618      6720696E 
+ 618      7400
+ 619              	.LASF17:
+ 620 01cc 63686172 		.ascii	"char\000"
+ 620      00
+ 621              	.LASF22:
+ 622 01d1 636F756E 		.ascii	"count\000"
+ 622      7400
+ 623              	.LASF2:
+ 624 01d7 73686F72 		.ascii	"short int\000"
+ 624      7420696E 
+ 624      7400
+ 625              	.LASF24:
+ 626 01e1 62756666 		.ascii	"buffer\000"
+ 626      657200
+ 627              	.LASF11:
+ 628 01e8 75696E74 		.ascii	"uint8\000"
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccNLdkes.s 			page 15
+
+
+ 628      3800
+ 629              	.LASF4:
+ 630 01ee 6C6F6E67 		.ascii	"long int\000"
+ 630      20696E74 
+ 630      00
+ 631              	.LASF0:
+ 632 01f7 7369676E 		.ascii	"signed char\000"
+ 632      65642063 
+ 632      68617200 
+ 633              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

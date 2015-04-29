@@ -1,10 +1,10 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2015-04-06T20:47:08Z")
+ (DATE "2015-04-28T18:05:58Z")
  (DESIGN "TP_Sensor")
  (VENDOR "Cypress Semiconductor")
- (PROGRAM "cydsfit")
- (VERSION "No Version Information Found")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 3.1 SP2")
  (DIVIDER .)
  (TIMESCALE 1 ns)
  (CELL

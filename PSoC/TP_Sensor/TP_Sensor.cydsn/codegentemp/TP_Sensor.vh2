@@ -2,7 +2,7 @@
 --	Conversion of TP_Sensor.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Apr 06 17:47:05 2015
+--	Tue Apr 28 15:05:55 2015
 --
 
 USE cypress.cypress.all;
@@ -172,7 +172,11 @@ one <=  ('1') ;
 		pa_in_reset=>-1,
 		pa_out_clock=>-1,
 		pa_out_clock_en=>-1,
-		pa_out_reset=>-1)
+		pa_out_reset=>-1,
+		ovt_needed=>"",
+		ovt_slew_control=>"",
+		ovt_hyst_trim=>"",
+		input_buffer_sel=>"")
 	PORT MAP(oe=>(one),
 		y=>(zero),
 		fb=>(\USBUART:tmpFB_0__Dm_net_0\),
@@ -237,7 +241,11 @@ one <=  ('1') ;
 		pa_in_reset=>-1,
 		pa_out_clock=>-1,
 		pa_out_clock_en=>-1,
-		pa_out_reset=>-1)
+		pa_out_reset=>-1,
+		ovt_needed=>"",
+		ovt_slew_control=>"",
+		ovt_hyst_trim=>"",
+		input_buffer_sel=>"")
 	PORT MAP(oe=>(one),
 		y=>(zero),
 		fb=>(\USBUART:tmpFB_0__Dp_net_0\),
@@ -322,7 +330,11 @@ one <=  ('1') ;
 		pa_in_reset=>-1,
 		pa_out_clock=>-1,
 		pa_out_clock_en=>-1,
-		pa_out_reset=>-1)
+		pa_out_reset=>-1,
+		ovt_needed=>"",
+		ovt_slew_control=>"",
+		ovt_hyst_trim=>"",
+		input_buffer_sel=>"")
 	PORT MAP(oe=>(one, one, one, one,
 			one, one, one),
 		y=>(zero, zero, zero, zero,

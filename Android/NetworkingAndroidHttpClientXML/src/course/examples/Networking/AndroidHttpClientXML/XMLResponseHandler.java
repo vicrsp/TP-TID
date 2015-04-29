@@ -39,11 +39,12 @@ class XMLResponseHandler implements ResponseHandler<String> {
 
 				if (eventType == XmlPullParser.START_TAG) {
 					Log.i("XMLResponseHandler", "Start tag");
+					Log.i("XMLResponseHandler", xpp.getText());
 					
-//					if (xpp.getText().equals(TEMP_TAG))
-//						mIsTemp = true;
-//					else
-//						mIsTemp = false;
+					if (xpp.getText() == (TEMP_TAG))
+						mIsTemp = true;
+					else
+						mIsTemp = false;
 						
 				} else if (eventType == XmlPullParser.END_TAG) {
 					Log.i("XMLResponseHandler", "End tag");					

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">NetworkingAndroidHttpClientXML</string>
+    <string name="app_name">TP-Técnicas de Integração de Dados</string>
 	<string name="load_data_string">Load Data</string>
     
 </resources>

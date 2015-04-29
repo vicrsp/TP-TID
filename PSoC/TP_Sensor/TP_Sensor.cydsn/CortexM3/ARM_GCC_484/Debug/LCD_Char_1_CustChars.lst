@@ -1,0 +1,705 @@
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"LCD_Char_1_CustChars.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	LCD_Char_1_customFonts
+  19              		.section	.rodata
+  20              		.align	2
+  21              		.type	LCD_Char_1_customFonts, %object
+  22              		.size	LCD_Char_1_customFonts, 64
+  23              	LCD_Char_1_customFonts:
+  24 0000 00       		.byte	0
+  25 0001 0E       		.byte	14
+  26 0002 08       		.byte	8
+  27 0003 08       		.byte	8
+  28 0004 08       		.byte	8
+  29 0005 0E       		.byte	14
+  30 0006 00       		.byte	0
+  31 0007 00       		.byte	0
+  32 0008 00       		.byte	0
+  33 0009 0A       		.byte	10
+  34 000a 0A       		.byte	10
+  35 000b 04       		.byte	4
+  36 000c 04       		.byte	4
+  37 000d 04       		.byte	4
+  38 000e 00       		.byte	0
+  39 000f 00       		.byte	0
+  40 0010 00       		.byte	0
+  41 0011 0E       		.byte	14
+  42 0012 0A       		.byte	10
+  43 0013 0E       		.byte	14
+  44 0014 08       		.byte	8
+  45 0015 08       		.byte	8
+  46 0016 00       		.byte	0
+  47 0017 00       		.byte	0
+  48 0018 00       		.byte	0
+  49 0019 0E       		.byte	14
+  50 001a 0A       		.byte	10
+  51 001b 0C       		.byte	12
+  52 001c 0A       		.byte	10
+  53 001d 0A       		.byte	10
+  54 001e 00       		.byte	0
+  55 001f 00       		.byte	0
+  56 0020 00       		.byte	0
+  57 0021 0E       		.byte	14
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 2
+
+
+  58 0022 08       		.byte	8
+  59 0023 0C       		.byte	12
+  60 0024 08       		.byte	8
+  61 0025 0E       		.byte	14
+  62 0026 00       		.byte	0
+  63 0027 00       		.byte	0
+  64 0028 00       		.byte	0
+  65 0029 0E       		.byte	14
+  66 002a 08       		.byte	8
+  67 002b 0E       		.byte	14
+  68 002c 02       		.byte	2
+  69 002d 0E       		.byte	14
+  70 002e 00       		.byte	0
+  71 002f 00       		.byte	0
+  72 0030 00       		.byte	0
+  73 0031 0E       		.byte	14
+  74 0032 08       		.byte	8
+  75 0033 0E       		.byte	14
+  76 0034 02       		.byte	2
+  77 0035 0E       		.byte	14
+  78 0036 00       		.byte	0
+  79 0037 00       		.byte	0
+  80 0038 0C       		.byte	12
+  81 0039 12       		.byte	18
+  82 003a 12       		.byte	18
+  83 003b 0C       		.byte	12
+  84 003c 00       		.byte	0
+  85 003d 00       		.byte	0
+  86 003e 00       		.byte	0
+  87 003f 00       		.byte	0
+  88              		.section	.text.LCD_Char_1_LoadCustomFonts,"ax",%progbits
+  89              		.align	2
+  90              		.global	LCD_Char_1_LoadCustomFonts
+  91              		.thumb
+  92              		.thumb_func
+  93              		.type	LCD_Char_1_LoadCustomFonts, %function
+  94              	LCD_Char_1_LoadCustomFonts:
+  95              	.LFB0:
+  96              		.file 1 ".\\Generated_Source\\PSoC5\\LCD_Char_1_CustChars.c"
+   1:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * File Name: LCD_Char_1_CustChars.c
+   3:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * Version 2.0
+   4:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *
+   5:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * Description:
+   6:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  This file provides the source code for the Character LCD custom character
+   7:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  API.
+   8:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *
+   9:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * Note:
+  10:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *
+  11:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** 
+  18:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** #include "LCD_Char_1.h"
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 3
+
+
+  19:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** 
+  20:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** 
+  21:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** uint8 const CYCODE LCD_Char_1_customFonts[] = \
+  22:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** {
+  23:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Character LCD_Char_1_CUSTOM_0   */
+  24:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****         0x00u,    0x0Eu,    0x08u,    0x08u,    0x08u,    0x0Eu,    0x00u,    0x00u, \
+  25:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Character LCD_Char_1_CUSTOM_1   */
+  26:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****         0x00u,    0x0Au,    0x0Au,    0x04u,    0x04u,    0x04u,    0x00u,    0x00u, \
+  27:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Character LCD_Char_1_CUSTOM_2   */
+  28:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****         0x00u,    0x0Eu,    0x0Au,    0x0Eu,    0x08u,    0x08u,    0x00u,    0x00u, \
+  29:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Character LCD_Char_1_CUSTOM_3   */
+  30:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****         0x00u,    0x0Eu,    0x0Au,    0x0Cu,    0x0Au,    0x0Au,    0x00u,    0x00u, \
+  31:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Character LCD_Char_1_CUSTOM_4   */
+  32:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****         0x00u,    0x0Eu,    0x08u,    0x0Cu,    0x08u,    0x0Eu,    0x00u,    0x00u, \
+  33:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Character LCD_Char_1_CUSTOM_5   */
+  34:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****         0x00u,    0x0Eu,    0x08u,    0x0Eu,    0x02u,    0x0Eu,    0x00u,    0x00u, \
+  35:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Character LCD_Char_1_CUSTOM_6   */
+  36:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****         0x00u,    0x0Eu,    0x08u,    0x0Eu,    0x02u,    0x0Eu,    0x00u,    0x00u, \
+  37:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Character LCD_Char_1_CUSTOM_7   */
+  38:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****         0x0Cu,    0x12u,    0x12u,    0x0Cu,    0x00u,    0x00u,    0x00u,    0x00u \
+  39:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****  };
+  40:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** 
+  41:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** 
+  42:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** /*******************************************************************************
+  43:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * Function Name: LCD_Char_1_LoadCustomFonts
+  44:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** ********************************************************************************
+  45:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *
+  46:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * Summary:
+  47:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  Loads 8 custom font characters into the LCD Module for use.  Cannot use
+  48:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  characters from two different font sets at once, but font sets can be
+  49:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  switched out during runtime.
+  50:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *
+  51:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * Parameters:
+  52:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  customData:  pointer to a constant array of 64 bytes representing 8 custom
+  53:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *               font characters.
+  54:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * Return:
+  55:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  None.
+  56:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *
+  57:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** * Theory:
+  58:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  Prior to using this function user need to import the pointer to custom
+  59:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  font array to your project by writting the following in the source code file
+  60:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  where custom font will be used:
+  61:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *       extern uint8 const CYCODE LCD_Char_customFonts[];
+  62:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  This function is not automatically called by the Start() routine and must be
+  63:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *  called manually by the user.
+  64:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *
+  65:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** *******************************************************************************/
+  66:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** void LCD_Char_1_LoadCustomFonts(uint8 const customData[]) 
+  67:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** {
+  97              		.loc 1 67 0
+  98              		.cfi_startproc
+  99              		@ args = 0, pretend = 0, frame = 16
+ 100              		@ frame_needed = 1, uses_anonymous_args = 0
+ 101 0000 80B5     		push	{r7, lr}
+ 102              		.cfi_def_cfa_offset 8
+ 103              		.cfi_offset 7, -8
+ 104              		.cfi_offset 14, -4
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 4
+
+
+ 105 0002 84B0     		sub	sp, sp, #16
+ 106              		.cfi_def_cfa_offset 24
+ 107 0004 00AF     		add	r7, sp, #0
+ 108              		.cfi_def_cfa_register 7
+ 109 0006 7860     		str	r0, [r7, #4]
+  68:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     uint8 indexU8;
+  69:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** 
+  70:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     LCD_Char_1_IsReady();
+ 110              		.loc 1 70 0
+ 111 0008 FFF7FEFF 		bl	LCD_Char_1_IsReady
+  71:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** 
+  72:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Set starting address in the LCD Module.
+  73:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     * Optionally: Read the current address to restore at a later time.
+  74:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     */
+  75:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     LCD_Char_1_WriteControl(LCD_Char_1_CGRAM_0);
+ 112              		.loc 1 75 0
+ 113 000c 4020     		movs	r0, #64
+ 114 000e FFF7FEFF 		bl	LCD_Char_1_WriteControl
+  76:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** 
+  77:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     /* Load in the 64 bytes of CustomChar Data */
+  78:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     for(indexU8 = 0u; indexU8 < LCD_Char_1_CUSTOM_CHAR_SET_LEN; indexU8++)
+ 115              		.loc 1 78 0
+ 116 0012 0023     		movs	r3, #0
+ 117 0014 FB73     		strb	r3, [r7, #15]
+ 118 0016 09E0     		b	.L2
+ 119              	.L3:
+  79:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     {
+  80:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****         LCD_Char_1_WriteData(customData[indexU8]);
+ 120              		.loc 1 80 0 discriminator 2
+ 121 0018 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 122 001a 7A68     		ldr	r2, [r7, #4]
+ 123 001c 1344     		add	r3, r3, r2
+ 124 001e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 125 0020 1846     		mov	r0, r3
+ 126 0022 FFF7FEFF 		bl	LCD_Char_1_WriteData
+  78:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     for(indexU8 = 0u; indexU8 < LCD_Char_1_CUSTOM_CHAR_SET_LEN; indexU8++)
+ 127              		.loc 1 78 0 discriminator 2
+ 128 0026 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 129 0028 0133     		adds	r3, r3, #1
+ 130 002a FB73     		strb	r3, [r7, #15]
+ 131              	.L2:
+  78:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     for(indexU8 = 0u; indexU8 < LCD_Char_1_CUSTOM_CHAR_SET_LEN; indexU8++)
+ 132              		.loc 1 78 0 is_stmt 0 discriminator 1
+ 133 002c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 134 002e 3F2B     		cmp	r3, #63
+ 135 0030 F2D9     		bls	.L3
+  81:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     }
+  82:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** 
+  83:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     LCD_Char_1_IsReady();
+ 136              		.loc 1 83 0 is_stmt 1
+ 137 0032 FFF7FEFF 		bl	LCD_Char_1_IsReady
+  84:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c ****     LCD_Char_1_WriteControl(LCD_Char_1_DDRAM_0);
+ 138              		.loc 1 84 0
+ 139 0036 8020     		movs	r0, #128
+ 140 0038 FFF7FEFF 		bl	LCD_Char_1_WriteControl
+  85:.\Generated_Source\PSoC5/LCD_Char_1_CustChars.c **** }
+ 141              		.loc 1 85 0
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 5
+
+
+ 142 003c 1037     		adds	r7, r7, #16
+ 143 003e BD46     		mov	sp, r7
+ 144              		@ sp needed
+ 145 0040 80BD     		pop	{r7, pc}
+ 146              		.cfi_endproc
+ 147              	.LFE0:
+ 148              		.size	LCD_Char_1_LoadCustomFonts, .-LCD_Char_1_LoadCustomFonts
+ 149 0042 00BF     		.text
+ 150              	.Letext0:
+ 151              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 152              		.section	.debug_info,"",%progbits
+ 153              	.Ldebug_info0:
+ 154 0000 F2000000 		.4byte	0xf2
+ 155 0004 0400     		.2byte	0x4
+ 156 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 157 000a 04       		.byte	0x4
+ 158 000b 01       		.uleb128 0x1
+ 159 000c 18010000 		.4byte	.LASF13
+ 160 0010 01       		.byte	0x1
+ 161 0011 AB010000 		.4byte	.LASF14
+ 162 0015 42000000 		.4byte	.LASF15
+ 163 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 164 001d 00000000 		.4byte	0
+ 165 0021 00000000 		.4byte	.Ldebug_line0
+ 166 0025 02       		.uleb128 0x2
+ 167 0026 01       		.byte	0x1
+ 168 0027 06       		.byte	0x6
+ 169 0028 F9010000 		.4byte	.LASF0
+ 170 002c 02       		.uleb128 0x2
+ 171 002d 01       		.byte	0x1
+ 172 002e 08       		.byte	0x8
+ 173 002f 34000000 		.4byte	.LASF1
+ 174 0033 02       		.uleb128 0x2
+ 175 0034 02       		.byte	0x2
+ 176 0035 05       		.byte	0x5
+ 177 0036 DB010000 		.4byte	.LASF2
+ 178 003a 02       		.uleb128 0x2
+ 179 003b 02       		.byte	0x2
+ 180 003c 07       		.byte	0x7
+ 181 003d C3000000 		.4byte	.LASF3
+ 182 0041 02       		.uleb128 0x2
+ 183 0042 04       		.byte	0x4
+ 184 0043 05       		.byte	0x5
+ 185 0044 EB010000 		.4byte	.LASF4
+ 186 0048 02       		.uleb128 0x2
+ 187 0049 04       		.byte	0x4
+ 188 004a 07       		.byte	0x7
+ 189 004b B1000000 		.4byte	.LASF5
+ 190 004f 02       		.uleb128 0x2
+ 191 0050 08       		.byte	0x8
+ 192 0051 05       		.byte	0x5
+ 193 0052 9D010000 		.4byte	.LASF6
+ 194 0056 02       		.uleb128 0x2
+ 195 0057 08       		.byte	0x8
+ 196 0058 07       		.byte	0x7
+ 197 0059 EA000000 		.4byte	.LASF7
+ 198 005d 03       		.uleb128 0x3
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 6
+
+
+ 199 005e 04       		.byte	0x4
+ 200 005f 05       		.byte	0x5
+ 201 0060 696E7400 		.ascii	"int\000"
+ 202 0064 02       		.uleb128 0x2
+ 203 0065 04       		.byte	0x4
+ 204 0066 07       		.byte	0x7
+ 205 0067 DD000000 		.4byte	.LASF8
+ 206 006b 04       		.uleb128 0x4
+ 207 006c E5010000 		.4byte	.LASF16
+ 208 0070 02       		.byte	0x2
+ 209 0071 5B       		.byte	0x5b
+ 210 0072 2C000000 		.4byte	0x2c
+ 211 0076 02       		.uleb128 0x2
+ 212 0077 04       		.byte	0x4
+ 213 0078 04       		.byte	0x4
+ 214 0079 2E000000 		.4byte	.LASF9
+ 215 007d 02       		.uleb128 0x2
+ 216 007e 08       		.byte	0x8
+ 217 007f 04       		.byte	0x4
+ 218 0080 D6000000 		.4byte	.LASF10
+ 219 0084 02       		.uleb128 0x2
+ 220 0085 01       		.byte	0x1
+ 221 0086 08       		.byte	0x8
+ 222 0087 F4010000 		.4byte	.LASF11
+ 223 008b 05       		.uleb128 0x5
+ 224 008c 00000000 		.4byte	.LASF17
+ 225 0090 01       		.byte	0x1
+ 226 0091 42       		.byte	0x42
+ 227 0092 00000000 		.4byte	.LFB0
+ 228 0096 42000000 		.4byte	.LFE0-.LFB0
+ 229 009a 01       		.uleb128 0x1
+ 230 009b 9C       		.byte	0x9c
+ 231 009c BD000000 		.4byte	0xbd
+ 232 00a0 06       		.uleb128 0x6
+ 233 00a1 23000000 		.4byte	.LASF18
+ 234 00a5 01       		.byte	0x1
+ 235 00a6 42       		.byte	0x42
+ 236 00a7 BD000000 		.4byte	0xbd
+ 237 00ab 02       		.uleb128 0x2
+ 238 00ac 91       		.byte	0x91
+ 239 00ad 6C       		.sleb128 -20
+ 240 00ae 07       		.uleb128 0x7
+ 241 00af 1B000000 		.4byte	.LASF19
+ 242 00b3 01       		.byte	0x1
+ 243 00b4 44       		.byte	0x44
+ 244 00b5 6B000000 		.4byte	0x6b
+ 245 00b9 02       		.uleb128 0x2
+ 246 00ba 91       		.byte	0x91
+ 247 00bb 77       		.sleb128 -9
+ 248 00bc 00       		.byte	0
+ 249 00bd 08       		.uleb128 0x8
+ 250 00be 04       		.byte	0x4
+ 251 00bf C3000000 		.4byte	0xc3
+ 252 00c3 09       		.uleb128 0x9
+ 253 00c4 6B000000 		.4byte	0x6b
+ 254 00c8 0A       		.uleb128 0xa
+ 255 00c9 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 7
+
+
+ 256 00cd D8000000 		.4byte	0xd8
+ 257 00d1 0B       		.uleb128 0xb
+ 258 00d2 D8000000 		.4byte	0xd8
+ 259 00d6 3F       		.byte	0x3f
+ 260 00d7 00       		.byte	0
+ 261 00d8 02       		.uleb128 0x2
+ 262 00d9 04       		.byte	0x4
+ 263 00da 07       		.byte	0x7
+ 264 00db 94010000 		.4byte	.LASF12
+ 265 00df 0C       		.uleb128 0xc
+ 266 00e0 01010000 		.4byte	.LASF20
+ 267 00e4 01       		.byte	0x1
+ 268 00e5 15       		.byte	0x15
+ 269 00e6 F0000000 		.4byte	0xf0
+ 270 00ea 05       		.uleb128 0x5
+ 271 00eb 03       		.byte	0x3
+ 272 00ec 00000000 		.4byte	LCD_Char_1_customFonts
+ 273 00f0 09       		.uleb128 0x9
+ 274 00f1 C8000000 		.4byte	0xc8
+ 275 00f5 00       		.byte	0
+ 276              		.section	.debug_abbrev,"",%progbits
+ 277              	.Ldebug_abbrev0:
+ 278 0000 01       		.uleb128 0x1
+ 279 0001 11       		.uleb128 0x11
+ 280 0002 01       		.byte	0x1
+ 281 0003 25       		.uleb128 0x25
+ 282 0004 0E       		.uleb128 0xe
+ 283 0005 13       		.uleb128 0x13
+ 284 0006 0B       		.uleb128 0xb
+ 285 0007 03       		.uleb128 0x3
+ 286 0008 0E       		.uleb128 0xe
+ 287 0009 1B       		.uleb128 0x1b
+ 288 000a 0E       		.uleb128 0xe
+ 289 000b 55       		.uleb128 0x55
+ 290 000c 17       		.uleb128 0x17
+ 291 000d 11       		.uleb128 0x11
+ 292 000e 01       		.uleb128 0x1
+ 293 000f 10       		.uleb128 0x10
+ 294 0010 17       		.uleb128 0x17
+ 295 0011 00       		.byte	0
+ 296 0012 00       		.byte	0
+ 297 0013 02       		.uleb128 0x2
+ 298 0014 24       		.uleb128 0x24
+ 299 0015 00       		.byte	0
+ 300 0016 0B       		.uleb128 0xb
+ 301 0017 0B       		.uleb128 0xb
+ 302 0018 3E       		.uleb128 0x3e
+ 303 0019 0B       		.uleb128 0xb
+ 304 001a 03       		.uleb128 0x3
+ 305 001b 0E       		.uleb128 0xe
+ 306 001c 00       		.byte	0
+ 307 001d 00       		.byte	0
+ 308 001e 03       		.uleb128 0x3
+ 309 001f 24       		.uleb128 0x24
+ 310 0020 00       		.byte	0
+ 311 0021 0B       		.uleb128 0xb
+ 312 0022 0B       		.uleb128 0xb
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 8
+
+
+ 313 0023 3E       		.uleb128 0x3e
+ 314 0024 0B       		.uleb128 0xb
+ 315 0025 03       		.uleb128 0x3
+ 316 0026 08       		.uleb128 0x8
+ 317 0027 00       		.byte	0
+ 318 0028 00       		.byte	0
+ 319 0029 04       		.uleb128 0x4
+ 320 002a 16       		.uleb128 0x16
+ 321 002b 00       		.byte	0
+ 322 002c 03       		.uleb128 0x3
+ 323 002d 0E       		.uleb128 0xe
+ 324 002e 3A       		.uleb128 0x3a
+ 325 002f 0B       		.uleb128 0xb
+ 326 0030 3B       		.uleb128 0x3b
+ 327 0031 0B       		.uleb128 0xb
+ 328 0032 49       		.uleb128 0x49
+ 329 0033 13       		.uleb128 0x13
+ 330 0034 00       		.byte	0
+ 331 0035 00       		.byte	0
+ 332 0036 05       		.uleb128 0x5
+ 333 0037 2E       		.uleb128 0x2e
+ 334 0038 01       		.byte	0x1
+ 335 0039 3F       		.uleb128 0x3f
+ 336 003a 19       		.uleb128 0x19
+ 337 003b 03       		.uleb128 0x3
+ 338 003c 0E       		.uleb128 0xe
+ 339 003d 3A       		.uleb128 0x3a
+ 340 003e 0B       		.uleb128 0xb
+ 341 003f 3B       		.uleb128 0x3b
+ 342 0040 0B       		.uleb128 0xb
+ 343 0041 27       		.uleb128 0x27
+ 344 0042 19       		.uleb128 0x19
+ 345 0043 11       		.uleb128 0x11
+ 346 0044 01       		.uleb128 0x1
+ 347 0045 12       		.uleb128 0x12
+ 348 0046 06       		.uleb128 0x6
+ 349 0047 40       		.uleb128 0x40
+ 350 0048 18       		.uleb128 0x18
+ 351 0049 9642     		.uleb128 0x2116
+ 352 004b 19       		.uleb128 0x19
+ 353 004c 01       		.uleb128 0x1
+ 354 004d 13       		.uleb128 0x13
+ 355 004e 00       		.byte	0
+ 356 004f 00       		.byte	0
+ 357 0050 06       		.uleb128 0x6
+ 358 0051 05       		.uleb128 0x5
+ 359 0052 00       		.byte	0
+ 360 0053 03       		.uleb128 0x3
+ 361 0054 0E       		.uleb128 0xe
+ 362 0055 3A       		.uleb128 0x3a
+ 363 0056 0B       		.uleb128 0xb
+ 364 0057 3B       		.uleb128 0x3b
+ 365 0058 0B       		.uleb128 0xb
+ 366 0059 49       		.uleb128 0x49
+ 367 005a 13       		.uleb128 0x13
+ 368 005b 02       		.uleb128 0x2
+ 369 005c 18       		.uleb128 0x18
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 9
+
+
+ 370 005d 00       		.byte	0
+ 371 005e 00       		.byte	0
+ 372 005f 07       		.uleb128 0x7
+ 373 0060 34       		.uleb128 0x34
+ 374 0061 00       		.byte	0
+ 375 0062 03       		.uleb128 0x3
+ 376 0063 0E       		.uleb128 0xe
+ 377 0064 3A       		.uleb128 0x3a
+ 378 0065 0B       		.uleb128 0xb
+ 379 0066 3B       		.uleb128 0x3b
+ 380 0067 0B       		.uleb128 0xb
+ 381 0068 49       		.uleb128 0x49
+ 382 0069 13       		.uleb128 0x13
+ 383 006a 02       		.uleb128 0x2
+ 384 006b 18       		.uleb128 0x18
+ 385 006c 00       		.byte	0
+ 386 006d 00       		.byte	0
+ 387 006e 08       		.uleb128 0x8
+ 388 006f 0F       		.uleb128 0xf
+ 389 0070 00       		.byte	0
+ 390 0071 0B       		.uleb128 0xb
+ 391 0072 0B       		.uleb128 0xb
+ 392 0073 49       		.uleb128 0x49
+ 393 0074 13       		.uleb128 0x13
+ 394 0075 00       		.byte	0
+ 395 0076 00       		.byte	0
+ 396 0077 09       		.uleb128 0x9
+ 397 0078 26       		.uleb128 0x26
+ 398 0079 00       		.byte	0
+ 399 007a 49       		.uleb128 0x49
+ 400 007b 13       		.uleb128 0x13
+ 401 007c 00       		.byte	0
+ 402 007d 00       		.byte	0
+ 403 007e 0A       		.uleb128 0xa
+ 404 007f 01       		.uleb128 0x1
+ 405 0080 01       		.byte	0x1
+ 406 0081 49       		.uleb128 0x49
+ 407 0082 13       		.uleb128 0x13
+ 408 0083 01       		.uleb128 0x1
+ 409 0084 13       		.uleb128 0x13
+ 410 0085 00       		.byte	0
+ 411 0086 00       		.byte	0
+ 412 0087 0B       		.uleb128 0xb
+ 413 0088 21       		.uleb128 0x21
+ 414 0089 00       		.byte	0
+ 415 008a 49       		.uleb128 0x49
+ 416 008b 13       		.uleb128 0x13
+ 417 008c 2F       		.uleb128 0x2f
+ 418 008d 0B       		.uleb128 0xb
+ 419 008e 00       		.byte	0
+ 420 008f 00       		.byte	0
+ 421 0090 0C       		.uleb128 0xc
+ 422 0091 34       		.uleb128 0x34
+ 423 0092 00       		.byte	0
+ 424 0093 03       		.uleb128 0x3
+ 425 0094 0E       		.uleb128 0xe
+ 426 0095 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 10
+
+
+ 427 0096 0B       		.uleb128 0xb
+ 428 0097 3B       		.uleb128 0x3b
+ 429 0098 0B       		.uleb128 0xb
+ 430 0099 49       		.uleb128 0x49
+ 431 009a 13       		.uleb128 0x13
+ 432 009b 3F       		.uleb128 0x3f
+ 433 009c 19       		.uleb128 0x19
+ 434 009d 02       		.uleb128 0x2
+ 435 009e 18       		.uleb128 0x18
+ 436 009f 00       		.byte	0
+ 437 00a0 00       		.byte	0
+ 438 00a1 00       		.byte	0
+ 439              		.section	.debug_aranges,"",%progbits
+ 440 0000 1C000000 		.4byte	0x1c
+ 441 0004 0200     		.2byte	0x2
+ 442 0006 00000000 		.4byte	.Ldebug_info0
+ 443 000a 04       		.byte	0x4
+ 444 000b 00       		.byte	0
+ 445 000c 0000     		.2byte	0
+ 446 000e 0000     		.2byte	0
+ 447 0010 00000000 		.4byte	.LFB0
+ 448 0014 42000000 		.4byte	.LFE0-.LFB0
+ 449 0018 00000000 		.4byte	0
+ 450 001c 00000000 		.4byte	0
+ 451              		.section	.debug_ranges,"",%progbits
+ 452              	.Ldebug_ranges0:
+ 453 0000 00000000 		.4byte	.LFB0
+ 454 0004 42000000 		.4byte	.LFE0
+ 455 0008 00000000 		.4byte	0
+ 456 000c 00000000 		.4byte	0
+ 457              		.section	.debug_line,"",%progbits
+ 458              	.Ldebug_line0:
+ 459 0000 80000000 		.section	.debug_str,"MS",%progbits,1
+ 459      02005300 
+ 459      00000201 
+ 459      FB0E0D00 
+ 459      01010101 
+ 460              	.LASF17:
+ 461 0000 4C43445F 		.ascii	"LCD_Char_1_LoadCustomFonts\000"
+ 461      43686172 
+ 461      5F315F4C 
+ 461      6F616443 
+ 461      7573746F 
+ 462              	.LASF19:
+ 463 001b 696E6465 		.ascii	"indexU8\000"
+ 463      78553800 
+ 464              	.LASF18:
+ 465 0023 63757374 		.ascii	"customData\000"
+ 465      6F6D4461 
+ 465      746100
+ 466              	.LASF9:
+ 467 002e 666C6F61 		.ascii	"float\000"
+ 467      7400
+ 468              	.LASF1:
+ 469 0034 756E7369 		.ascii	"unsigned char\000"
+ 469      676E6564 
+ 469      20636861 
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 11
+
+
+ 469      7200
+ 470              	.LASF15:
+ 471 0042 433A5C55 		.ascii	"C:\\Users\\Victor Ruela\\Desktop\\UFMG\\2015-1\\Int"
+ 471      73657273 
+ 471      5C566963 
+ 471      746F7220 
+ 471      5275656C 
+ 472 006f 65677261 		.ascii	"egracao de Dados\\TP pratico\\TP-TID\\PSoC\\TP_Sens"
+ 472      63616F20 
+ 472      64652044 
+ 472      61646F73 
+ 472      5C545020 
+ 473 009e 6F725C54 		.ascii	"or\\TP_Sensor.cydsn\000"
+ 473      505F5365 
+ 473      6E736F72 
+ 473      2E637964 
+ 473      736E00
+ 474              	.LASF5:
+ 475 00b1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 475      20756E73 
+ 475      69676E65 
+ 475      6420696E 
+ 475      7400
+ 476              	.LASF3:
+ 477 00c3 73686F72 		.ascii	"short unsigned int\000"
+ 477      7420756E 
+ 477      7369676E 
+ 477      65642069 
+ 477      6E7400
+ 478              	.LASF10:
+ 479 00d6 646F7562 		.ascii	"double\000"
+ 479      6C6500
+ 480              	.LASF8:
+ 481 00dd 756E7369 		.ascii	"unsigned int\000"
+ 481      676E6564 
+ 481      20696E74 
+ 481      00
+ 482              	.LASF7:
+ 483 00ea 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 483      206C6F6E 
+ 483      6720756E 
+ 483      7369676E 
+ 483      65642069 
+ 484              	.LASF20:
+ 485 0101 4C43445F 		.ascii	"LCD_Char_1_customFonts\000"
+ 485      43686172 
+ 485      5F315F63 
+ 485      7573746F 
+ 485      6D466F6E 
+ 486              	.LASF13:
+ 487 0118 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 487      4320342E 
+ 487      382E3420 
+ 487      32303134 
+ 487      30353236 
+ 488 014b 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m3 -mthumb -g -O"
+ 488      20726576 
+ARM GAS  C:\Users\VICTOR~1\AppData\Local\Temp\ccRSSt1g.s 			page 12
+
+
+ 488      6973696F 
+ 488      6E203231 
+ 488      31333538 
+ 489 017e 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 489      66756E63 
+ 489      74696F6E 
+ 489      2D736563 
+ 489      74696F6E 
+ 490              	.LASF12:
+ 491 0194 73697A65 		.ascii	"sizetype\000"
+ 491      74797065 
+ 491      00
+ 492              	.LASF6:
+ 493 019d 6C6F6E67 		.ascii	"long long int\000"
+ 493      206C6F6E 
+ 493      6720696E 
+ 493      7400
+ 494              	.LASF14:
+ 495 01ab 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\LCD_Char_1_CustChars.c\000"
+ 495      6E657261 
+ 495      7465645F 
+ 495      536F7572 
+ 495      63655C50 
+ 496              	.LASF2:
+ 497 01db 73686F72 		.ascii	"short int\000"
+ 497      7420696E 
+ 497      7400
+ 498              	.LASF16:
+ 499 01e5 75696E74 		.ascii	"uint8\000"
+ 499      3800
+ 500              	.LASF4:
+ 501 01eb 6C6F6E67 		.ascii	"long int\000"
+ 501      20696E74 
+ 501      00
+ 502              	.LASF11:
+ 503 01f4 63686172 		.ascii	"char\000"
+ 503      00
+ 504              	.LASF0:
+ 505 01f9 7369676E 		.ascii	"signed char\000"
+ 505      65642063 
+ 505      68617200 
+ 506              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

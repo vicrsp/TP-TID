@@ -4,9 +4,9 @@
 
 #Version:            1.1
 
-#Build Date:         Mar 26 2013 14:54:34
+#Build Date:         Oct 23 2014 13:00:08
 
-#File Generated:     Apr 6 2015 17:47:06
+#File Generated:     Apr 28 2015 15:05:56
 
 #Purpose:            
 
@@ -14,16 +14,16 @@
 
 #***************************************************************************
 
-Executing : C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\bin/sjplacer.exe --proj-name TP_Sensor --netlist-vh2 TP_Sensor_p.vh2 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\dev/psoc3/placer.ark --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\dev/psoc5/psoc5lp/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\dev/psoc5/psoc5lp/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\dev/psoc5/psoc5lp/dmaconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\dev/psoc5/psoc5lp/dsiconn.cydata --pins-file pins_100-TQFP.xml --lib-file TP_Sensor_p.lib --sdc-file TP_Sensor.sdc --io-pcf TP_Sensor.pci --outdir .
+Executing : C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\bin/sjplacer.exe --proj-name TP_Sensor --netlist-vh2 TP_Sensor_p.vh2 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\dev/psoc3/placer.ark --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\dev/psoc5/psoc5lp/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\dev/psoc5/psoc5lp/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\dev/psoc5/psoc5lp/dmaconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\dev/psoc5/psoc5lp/dsiconn.cydata --pins-file pins_100-TQFP.xml --lib-file TP_Sensor_p.lib --sdc-file TP_Sensor.sdc --io-pcf TP_Sensor.pci --outdir .
 
 		Softjin Techologies Placer, Version 1.1
 
-Build Date : Jul 22 2013	11:20:09
+Build Date : Oct 23 2014	13:09:21
 
 D2004: Option and Settings Summary
 =============================================================
 Netlist vh2 file          - TP_Sensor_p.vh2
-Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\dev/psoc3/placer.ark
+Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\dev/psoc3/placer.ark
 Package                   - 
 Defparam file             - 
 SDC file                  - TP_Sensor.sdc
@@ -34,7 +34,7 @@ IO Placement file         - TP_Sensor.pci
 D2050: Starting reading inputs for placer
 =============================================================
 D2065: Reading netlist file : "TP_Sensor_p.vh2"
-D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\dev/psoc3/placer.ark"
+D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\dev/psoc3/placer.ark"
 D2051: Reading of inputs for placer completed successfully
 
 D2053: Starting placement of the design

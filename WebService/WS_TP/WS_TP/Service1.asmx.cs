@@ -45,7 +45,7 @@ namespace WS_TP
                 line = s.ReadLine();
                 s.Close();
 
-                line = line + " " + DateTime.Now.ToLongTimeString();
+                line = line + "°C  --  "  + DateTime.Now.ToLongTimeString();
                 temperatures.Add(line);
                 Session["READINGS"] = temperatures;
 

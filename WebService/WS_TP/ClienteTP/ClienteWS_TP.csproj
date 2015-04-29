@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClienteTP.aspx" />
+    <None Include="Properties\PublishProfiles\Victor.pubxml" />
     <None Include="Service References\ReadPSoCService\Service1.disco" />
     <None Include="Service References\ReadPSoCService\configuration91.svcinfo" />
     <None Include="Service References\ReadPSoCService\configuration.svcinfo" />

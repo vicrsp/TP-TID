@@ -6,18 +6,31 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 
 
+
+
+
+
+
 //import course.examples.Networking.AndroidHttpClientXML.NetworkingAndroidHttpClientXMLActivity.HttpGetTask;
 import android.app.Activity;
 import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 public class MainActivity extends Activity {
 	private TextView text;
+	//private TextView text2;
+	private EditText editText;
+	public String URL;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,22 +40,39 @@ public class MainActivity extends Activity {
 		final Button loadButton = (Button) findViewById(course.examples.Networking.AndroidHttpClientXML.R.id.button1);
 		
 		text = (TextView) findViewById(course.examples.Networking.AndroidHttpClientXML.R.id.textView1);
+		//text2 = (TextView) findViewById(course.examples.Networking.AndroidHttpClientXML.R.id.textView2);
+		editText = (EditText) findViewById(course.examples.Networking.AndroidHttpClientXML.R.id.editText1);
 		
 		loadButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				
+				URL = "http://" + editText.getText() + "/WS_TP/Service1.asmx/ReadPSoC";
 				new HttpGetTask().execute();
 				
 			}
 		});
+		
+/*		editText.setOnEditorActionListener(new OnEditorActionListener() {
+		    @Override
+		    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+		        boolean handled = false;
+		        if (actionId == EditorInfo.IME_ACTION_NEXT) {
+		            URL = "http://" + editText.getText() + "/WS_TP/Service1.asmx/ReadPSoC";
+		            Log.i("URL", URL);
+		        	handled = true;
+		        }
+		        return handled;
+		    }
+		    
+		});*/
 	}
 	
 	private class HttpGetTask extends AsyncTask<Void, Void, String> {
 
 		// IP deve mudar dependendo do dia
-		private static final String URL = "http://192.168.0.195/WS_TP/Service1.asmx/ReadPSoC";
+		//private static final String URL = "http://192.168.0.195/WS_TP/Service1.asmx/ReadPSoC";
 				
 
 		AndroidHttpClient mClient = AndroidHttpClient.newInstance("");
