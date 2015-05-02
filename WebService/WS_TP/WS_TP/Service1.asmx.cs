@@ -24,9 +24,10 @@ namespace WS_TP
             string line = "";
             List<string> temperatures;
 
-            SerialPort s = new SerialPort("COM3", 9600);
-
-
+            try
+            {
+                SerialPort s = new SerialPort("COM3", 9600);
+            
             if (Session["READINGS"] == null)
             {
                 temperatures = new List<string>();
@@ -36,7 +37,7 @@ namespace WS_TP
                 temperatures = (List<string>)Session["READINGS"];
             }
 
-
+            
             if (s != null)
             {
 
@@ -44,13 +45,13 @@ namespace WS_TP
                 s.WriteLine("OK");
                 line = s.ReadLine();
                 s.Close();
+                System.Threading.Thread.Sleep(1000);
 
                 line = line + "°C  --  "  + DateTime.Now.ToLongTimeString();
                 temperatures.Add(line);
                 Session["READINGS"] = temperatures;
 
                 return line;
-                
                     
             }
             else
@@ -59,6 +60,9 @@ namespace WS_TP
                 Session["READINGS"] = temperatures;
                 return "Failed";
             }
+            }
+            catch (Exception ex) { return "Error opening port"; }
+
 
         }
         [WebMethod(EnableSession = true)]

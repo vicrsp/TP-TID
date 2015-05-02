@@ -122,24 +122,6 @@
 <v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
 <v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
 <v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\cypins.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -215,24 +197,6 @@
 <v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\CyFlash.lst</v>
 <v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\CyLib.lst</v>
 <v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\cymetadata.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\cyPm.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\CySpc.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\cyutils.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\DieTemp.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\LCD_Char_1.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\LCD_Char_1_CustChars.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\LCD_Char_1_LCDPort.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\LCD_Char_1_PM.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\main.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART_audio.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART_boot.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART_cdc.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART_cls.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART_descr.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART_Dm.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART_Dp.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART_drv.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
