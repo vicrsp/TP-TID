@@ -14,10 +14,8 @@ import android.util.Log;
 
 class XMLResponseHandler implements ResponseHandler<String> {
 
-	private static final String TEMP_TAG = "string";
 
 	private String mResult;
-	private boolean mIsTemp = true;
 
 	@Override
 	public String handleResponse(HttpResponse response)
@@ -39,12 +37,6 @@ class XMLResponseHandler implements ResponseHandler<String> {
 
 				if (eventType == XmlPullParser.START_TAG) {
 					Log.i("XMLResponseHandler", "Start tag");
-					Log.i("XMLResponseHandler", xpp.getText());
-					
-					if (xpp.getText() == (TEMP_TAG))
-						mIsTemp = true;
-					else
-						mIsTemp = false;
 						
 				} else if (eventType == XmlPullParser.END_TAG) {
 					Log.i("XMLResponseHandler", "End tag");					
@@ -62,10 +54,7 @@ class XMLResponseHandler implements ResponseHandler<String> {
 	
 
 	public void text(String text) {
-		if (mIsTemp)
-			mResult = text.trim();
-		else
-			mResult = "Bad XML received";
+			mResult = text.trim();	
 	}
 
 

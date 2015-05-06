@@ -45,7 +45,7 @@ namespace WS_TP
                 s.WriteLine("OK");
                 line = s.ReadLine();
                 s.Close();
-                System.Threading.Thread.Sleep(1000);
+                //System.Threading.Thread.Sleep(1000);
 
                 line = line + "°C  --  "  + DateTime.Now.ToLongTimeString();
                 temperatures.Add(line);
