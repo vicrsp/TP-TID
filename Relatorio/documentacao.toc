@@ -5,9 +5,13 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Estrutura da aplica\IeC {\c c}\IeC {\~a}o}{3}{subsubsection.2.2.1}
 \contentsline {paragraph}{ReadPSoC}{3}{section*.4}
 \contentsline {paragraph}{getReadings}{4}{section*.5}
-\contentsline {subsection}{\numberline {2.3}Aplcativo Android}{4}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Clente Web}{4}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.3}Aplicativo Android}{4}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Interface gr\IeC {\'a}fica}{4}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Estrutura da aplica\IeC {\c c}\IeC {\~a}o}{4}{subsubsection.2.3.2}
+\contentsline {paragraph}{MainActivity}{4}{section*.6}
+\contentsline {paragraph}{XMLResponseHandler}{5}{section*.7}
+\contentsline {subsection}{\numberline {2.4}Clente Web}{5}{subsection.2.4}
 \contentsline {section}{\numberline {3}Resultados}{5}{section.3}
 \contentsline {subsection}{\numberline {3.1}Cliente Web}{5}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Aplicativo Android}{5}{subsection.3.2}
-\contentsline {section}{\numberline {4}Conclus\IeC {\~a}o}{5}{section.4}
+\contentsline {subsection}{\numberline {3.2}Aplicativo Android}{6}{subsection.3.2}
+\contentsline {section}{\numberline {4}Conclus\IeC {\~a}o}{7}{section.4}

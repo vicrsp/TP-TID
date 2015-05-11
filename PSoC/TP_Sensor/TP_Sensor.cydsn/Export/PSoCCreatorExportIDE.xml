@@ -77,19 +77,12 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_midi.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_midi.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_pvt.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_Char_1.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_Char_1.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_Char_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_Char_1_CustChars.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dm_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dm.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dm.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dp_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dp.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\USBUART_Dp.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_Char_1_LCDPort_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_Char_1_LCDPort.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\LCD_Char_1_LCDPort.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\Cm3Start.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\core_cm3_psoc5.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC5\core_cm3.h</File>

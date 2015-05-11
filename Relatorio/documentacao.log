@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.8)  6 MAY 2015 16:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.8)  10 MAY 2015 22:18
 entering extended mode
 **documentacao.tex
 
@@ -672,7 +672,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.53 \newpage
-              [1] <arquitetura.jpg, id=69, 760.8425pt x 456.70625pt>
+              [1] <arquitetura.jpg, id=79, 760.8425pt x 456.70625pt>
 File: arquitetura.jpg Graphic file (type jpg)
 
 <use arquitetura.jpg>
@@ -680,12 +680,12 @@ Package pdftex.def Info: arquitetura.jpg used on input line 61.
 (pdftex.def)             Requested size: 358.50317pt x 215.20248pt.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 67.
- <psoc1.jpg, id=70, 1028.34187pt x 471.26062pt>
+ <psoc1.jpg, id=80, 1028.34187pt x 471.26062pt>
 File: psoc1.jpg Graphic file (type jpg)
 
 <use psoc1.jpg>
 Package pdftex.def Info: psoc1.jpg used on input line 71.
-(pdftex.def)             Requested size: 409.72125pt x 187.76744pt.
+(pdftex.def)             Requested size: 512.14963pt x 234.7093pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -700,31 +700,53 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 99.
  [3 <C:/Users/Victor Ruela/Desktop/UFMG/2015-1/Integracao de Dados/TP pratico/T
-P-TID/Relatorio/psoc1.jpg>] [4] <appemulador.jpg, id=124, 442.65375pt x 572.137
-5pt>
-File: appemulador.jpg Graphic file (type jpg)
+P-TID/Relatorio/psoc1.jpg>] [4] <clienteweb.jpg, id=120, 1028.34187pt x 578.16p
+t>
+File: clienteweb.jpg Graphic file (type jpg)
 
-<use appemulador.jpg>
-Package pdftex.def Info: appemulador.jpg used on input line 165.
+<use clienteweb.jpg>
+Package pdftex.def Info: clienteweb.jpg used on input line 172.
+(pdftex.def)             Requested size: 512.14963pt x 287.95007pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<appemulador.jpg, id=121, 442.65375pt x 572.1375pt>
+File: appemulador.jpg Graphic file (type jpg)
+ <use appemulador.jpg>
+Package pdftex.def Info: appemulador.jpg used on input line 182.
 (pdftex.def)             Requested size: 204.85672pt x 264.78404pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
- [5 <C:/Users/Victor Ruela/Desktop/UFMG/2015-1/Integracao de Dados/TP pratico/T
-P-TID/Relatorio/appemulador.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
+
+[5] <appnexus.jpg, id=146, 770.88pt x 1284.8pt>
+File: appnexus.jpg Graphic file (type jpg)
+ <use appnexus.jpg>
+Package pdftex.def Info: appnexus.jpg used on input line 189.
+(pdftex.def)             Requested size: 204.85672pt x 341.41139pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+[6 <C:/Users/Victor Ruela/Desktop/UFMG/2015-1/Integracao de Dados/TP pratico/TP
+-TID/Relatorio/clienteweb.jpg> <C:/Users/Victor Ruela/Desktop/UFMG/2015-1/Integ
+racao de Dados/TP pratico/TP-TID/Relatorio/appemulador.jpg>] [7 <C:/Users/Victo
+r Ruela/Desktop/UFMG/2015-1/Integracao de Dados/TP pratico/TP-TID/Relatorio/app
+nexus.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
 
 ("C:\Users\Victor Ruela\Desktop\UFMG\2015-1\Integracao de Dados\TP pratico\TP-T
 ID\Relatorio\documentacao.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
 Package rerunfilecheck Info: File `documentacao.out' has not changed.
-(rerunfilecheck)             Checksum: A5F3FFD78B28B90BDABEC74D2ED153B8;681.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
+(rerunfilecheck)             Checksum: 2BB52B75B5A95603114423AE357A1D24;852.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
  ) 
 Here is how much of TeX's memory you used:
- 9645 strings out of 493921
- 139292 string characters out of 3147262
- 279802 words of memory out of 3000000
- 12769 multiletter control sequences out of 15000+200000
+ 9668 strings out of 493921
+ 139641 string characters out of 3147262
+ 277802 words of memory out of 3000000
+ 12782 multiletter control sequences out of 15000+200000
  17903 words of font info for 52 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,8n,40p,722b,1249s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -733,9 +755,9 @@ s/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
 alatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on documentacao.pdf (6 pages, 388102 bytes).
+Output written on documentacao.pdf (8 pages, 573759 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 104 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 194 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 

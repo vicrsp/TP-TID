@@ -52,15 +52,6 @@
 <v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\DieTemp</v>
 <v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\DieTemp\DieTemp.c</v>
 <v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\DieTemp\DieTemp.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\LCD_Char_1</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\LCD_Char_1\LCD_Char_1.c</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\LCD_Char_1\LCD_Char_1.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\LCD_Char_1\LCD_Char_1_CustChars.c</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\LCD_Char_1\LCD_Char_1_PM.c</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\LCD_Char_1_LCDPort</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\LCD_Char_1_LCDPort\LCD_Char_1_LCDPort.c</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\LCD_Char_1_LCDPort\LCD_Char_1_LCDPort.h</v>
-<v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\LCD_Char_1_LCDPort\LCD_Char_1_LCDPort_aliases.h</v>
 <v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\USBUART</v>
 <v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\USBUART\USBUART.c</v>
 <v>TP_Sensor\TP_Sensor\Generated_Source\PSoC5\USBUART\USBUART.h</v>
@@ -157,10 +148,6 @@
 <v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\CySpc.lst</v>
 <v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\cyutils.lst</v>
 <v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\DieTemp.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\LCD_Char_1.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\LCD_Char_1_CustChars.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\LCD_Char_1_LCDPort.lst</v>
-<v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\LCD_Char_1_PM.lst</v>
 <v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\main.lst</v>
 <v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART.lst</v>
 <v>TP_Sensor\TP_Sensor\CortexM3\ARM_GCC_484\Debug\Listing Files\USBUART_audio.lst</v>

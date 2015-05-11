@@ -68,7 +68,7 @@
 		A aplicação foi feita no PSoC Creator. A criação de uma aplicação para o PSoC é feita através de diagrama de blocos e em C. Inicialmente, colocamos as instâncias dos componentes que serão utilizados em uma página do arquivo \textbf{TopDesig.cysch}, que é o padrão de qualquer projeto no PSoC Cretor. Depois precisamos inicializar e interligar os diversos componentes através das APIs de cada componente, em linguagem C. Para este projeto, foi foram necessários os componentes \textbf{DieTemp} e \textbf{USBUART}. O primeiro permite a leitura da temperatura do PSoC enquanto o segundo habilita o uso da porta USB da placa. Ambos foram usados com a configuração padrão.
 			\begin{figure}[h!]
 				\centering
-				\includegraphics[width=0.8\linewidth]{psoc1}
+				\includegraphics[width=1\linewidth]{psoc1}
 				\caption{Diagram de blocos no PSoC}
 				\label{fig:psoc1}
 			\end{figure}
@@ -124,7 +124,18 @@ s.Close();
 				
 		  Ambos os servicos são definidos como \textbf{[WebMethod(EnableSession=true)]}. Esse parâmetro permite salvar e recuperar valores do usuário que está acessando página Web. 
 	
-	\subsection{Aplcativo Android}
+	\subsection{Aplicativo Android}	
+			O aplicativo foi implementado em Java, usando as bibliotecas do pacote Android SDK tools.
+			\subsubsection{Interface gráfica}
+				A interface gráfica é bem simples, e consiste de um \textbf{EditText} para o usuário digitar o IP, um \textbf{TextView} para exibir a temperatura e um \textbf{Button} para requisitar um serviço do Web Service. A interface gráfica será exibida na seção dos resultados.
+				
+			\subsubsection{Estrutura da aplicação}
+			O aplicativo foi implementado usando duas classes: \textbf{MainActivity} e \textbf{XMLResponseHandler}. 
+			\paragraph{MainActivity} Consiste na atividade principal (thread primária). É responsável por atualizar o IP digitado e realizar as ações necessárias quando o botão é pressionado. Ao ser pressionado, ele cria uma thread secundária que inicia a comunicação com o Web Service. Esta é considerada uma boa prática em aplicativos Android, pois evita que a interface gráfica fique congelada enquanto a comunicação está sendo processada. A thread cria uma instancia da classe \textbf{XMLResponseHandler} para traduzir a mensagem XML recebida pela requisição HTML.
+			
+			\paragraph{XMLResponseHandler} Classe utilizada para processar a mensagem recebida em XML. Ela utiliza a API \textbf{XMLPULL V1} para processar a XML e obter a informação desejada, no caso a temperatura do PSoC. Seu funcionamento é simples e direto, e está bem descrito em:  \url{http://www.xmlpull.org/}. 
+			A informação extraída é então salva na variável associada ao \textbf{TextView} que exibe a temperatura na UI.
+				
 	
 	\subsection{Clente Web}
 		O cliente Web foi implementado usando Web Forms ASP.NET. A página foi desenvolvida em HTML e contém uma breve descrição de sua funcionalidade, um botão para requisitar a leitura do PSoC e uma tabela mostrando os valores recentemente lidos pelo usuário. Ao requisitar o botão, o seguinte script em C\# é executado:
@@ -156,6 +167,12 @@ s.Close();
 	\subsection{Cliente Web}
 	O cliente Web foi testado em diversos computadores na rede local e seu funcionamento foi como o esperado em todos os casos. A página web foi acessada de um computador com sistema operacional Windows, outro com iOS e de smartphones, funcionando corretamente em todos. 
 	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\linewidth]{clienteweb}
+		\caption{Funcionamento do cliente Web}
+		\label{fig:clienteweb}
+	\end{figure}
 	
 	\subsection{Aplicativo Android}
 	O aplicativo Android foi testado no emulador de dispositivos Android e em um Nexus 4. Ambos funcionaram perfeitamente.
@@ -167,6 +184,12 @@ s.Close();
 			\label{fig:emulador}
 		\end{figure}
 		
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.4\linewidth]{appnexus}
+			\caption{Screenshot de um Nexus 4}
+			\label{fig:nexus4}
+		\end{figure}
 
 \section{Conclusão}
 

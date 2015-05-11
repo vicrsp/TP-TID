@@ -26,13 +26,10 @@
 #include <USBUART_hid.h>
 #include <USBUART_midi.h>
 #include <USBUART_pvt.h>
-#include <LCD_Char_1.h>
 #include <USBUART_Dm_aliases.h>
 #include <USBUART_Dm.h>
 #include <USBUART_Dp_aliases.h>
 #include <USBUART_Dp.h>
-#include <LCD_Char_1_LCDPort_aliases.h>
-#include <LCD_Char_1_LCDPort.h>
 #include <core_cm3_psoc5.h>
 #include <core_cm3.h>
 #include <CyDmac.h>

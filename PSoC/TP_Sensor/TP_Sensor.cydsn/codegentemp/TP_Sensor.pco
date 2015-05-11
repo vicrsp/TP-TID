@@ -1,5 +1,5 @@
 # TP_Sensor
-# 2015-04-28 18:05:56Z
+# 2015-05-08 14:38:52Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -8,13 +8,6 @@ dont_use_io iocell 1 1
 # IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 3
 set_location "ClockBlock" clockblockcell -1 -1 0
-set_io "\LCD_Char_1:LCDPort(0)\" iocell 0 0
-set_io "\LCD_Char_1:LCDPort(1)\" iocell 0 1
-set_io "\LCD_Char_1:LCDPort(2)\" iocell 0 2
-set_io "\LCD_Char_1:LCDPort(3)\" iocell 0 3
-set_io "\LCD_Char_1:LCDPort(4)\" iocell 0 4
-set_io "\LCD_Char_1:LCDPort(5)\" iocell 0 5
-set_io "\LCD_Char_1:LCDPort(6)\" iocell 0 6
 set_io "\USBUART:Dm(0)\" iocell 15 7
 set_io "\USBUART:Dp(0)\" iocell 15 6
 set_location "\USBUART:Dp\" logicalport -1 -1 15

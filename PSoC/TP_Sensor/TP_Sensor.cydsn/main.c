@@ -24,10 +24,6 @@ int main()
     cystatus Status;
     uint8 count;
     
-    LCD_Char_1_Start();
-    
-    LCD_Char_1_Position(1u, 0u);
-    LCD_Char_1_PrintString("OKKK");
     
     CyGlobalIntEnable; 
     
@@ -42,9 +38,6 @@ int main()
     {
         /* Place your application code here. */
         
-         CyDelay(50);
-         LCD_Char_1_Position(0u, 0u);
-         LCD_Char_1_PrintString("Aguardando");
        
         // Wait for temperature read command
         if(USBUART_DataIsReady() != 0u)               /* Check for input data from PC */
@@ -55,30 +48,7 @@ int main()
             
             Status = DieTemp_GetTemp(&temperature);
 
-             /* Displaying the Die Temperature value on the LCD */
-            LCD_Char_1_Position(0u, 0u);
-            LCD_Char_1_PrintString("Temp = ");
-
-            if (temperature >= 0 )
-            {
-                LCD_Char_1_PrintString("+");
-            }
-            else
-            {
-                /* If the temperature value is negative, display "-" sign and make value positive */
-                LCD_Char_1_PrintString("-");
-                temperature = (uint16)(~temperature + 1u);
-            }
-            
-            LCD_Char_1_PrintNumber((uint16) (temperature));
-            LCD_Char_1_PrintString(" ");
-            
-            LCD_Char_1_PutChar(LCD_Char_1_CUSTOM_7);
-            LCD_Char_1_PrintString("C");
-
-            LCD_Char_1_Position(1u, 0u);            
-            LCD_Char_1_PrintNumber(buffer[0]);
-            
+    
             
             sprintf(usbBuffer,"%d\n", temperature);
 
