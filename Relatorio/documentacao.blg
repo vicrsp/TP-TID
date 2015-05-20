@@ -1,0 +1,23 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: documentacao.aux
+The style file: plain.bst
+Database file #1: biblio_doc.bib
+Warning--entry type for "TextView" isn't style-file defined
+--line 2 of file biblio_doc.bib
+Warning--entry type for "EditText" isn't style-file defined
+--line 10 of file biblio_doc.bib
+Warning--entry type for "Button" isn't style-file defined
+--line 18 of file biblio_doc.bib
+Warning--entry type for "WebService" isn't style-file defined
+--line 26 of file biblio_doc.bib
+Warning--entry type for "httpclient" isn't style-file defined
+--line 45 of file biblio_doc.bib
+Warning--entry type for "asynctask" isn't style-file defined
+--line 53 of file biblio_doc.bib
+Warning--to sort, need author or key in EditText
+Warning--to sort, need author or key in TextView
+Warning--to sort, need author or key in Button
+Warning--to sort, need author or key in asynctask
+Warning--to sort, need author or key in httpclient
+Warning--to sort, need author or key in WebService
+Warning--empty year in wsbook
+(There were 13 warnings)
